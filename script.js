@@ -152,7 +152,7 @@
           filteredItems.forEach(([btsName, tableName]) => {
             const item = document.createElement("a");
             item.className = "dropdown-item";
-            item.href = `${tableName}.html`;
+            item.href = `/${tableName}/${tableName}.html`;
             item.innerHTML = `
                             <i class="fas fa-location-dot"></i>
                             ${tableName}
@@ -342,7 +342,7 @@
             data.forEach(item => {
                 const row = document.createElement('tr');
                 row.innerHTML = `
-                    <td><a href="Banasree.html">${item.btsName}</a></td>
+                    <td><a href="/Banasree/Banasree.html">${item.btsName}</a></td>
                     <td>${item.zone}</td>
                     <td>${item.time}</td>
                 `;
