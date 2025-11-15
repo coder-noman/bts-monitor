@@ -334,7 +334,7 @@
 
       .breadcumb {
         display: flex;
-        justify-content:center;
+        justify-content: center;
         color: var(--green);
         flex: 1;
       }
@@ -911,7 +911,7 @@
           <!-- Row 2 -->
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-tachometer-alt"></i> RFT
+              <i class="fas fa-tachometer-alt"></i> Rack Front Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -931,7 +931,7 @@
           </div>
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-tachometer-alt"></i> RRT
+              <i class="fas fa-tachometer-alt"></i> Rack Rare Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -951,7 +951,7 @@
           </div>
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> OT
+              <i class="fas fa-thermometer-half"></i> Outside Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -971,7 +971,27 @@
           </div>
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> RT
+              <i class="fas fa-thermometer-half"></i> DB Temp
+            </h3>
+            <div class="gauge">
+              <div class="gauge-bg">
+                <div class="gauge-fill" id="dbt-fill"></div>
+              </div>
+              <div class="gauge-center">
+                <div class="gauge-value" id="dbt-value">
+                  0<span class="gauge-unit">°C</span>
+                </div>
+                <div class="gauge-minmax">
+                  <span>0°C</span>
+                  <span>100°C</span>
+                </div>
+              </div>
+            </div>
+            <div class="status status-normal" id="dbt-status">Normal</div>
+          </div>
+          <div class="gauge-card">
+            <h3 class="gauge-title">
+              <i class="fas fa-thermometer-half"></i> Busbar P Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -991,7 +1011,7 @@
           </div>
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> NT
+              <i class="fas fa-thermometer-half"></i> Busbar N Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -1011,7 +1031,7 @@
           </div>
           <div class="gauge-card">
             <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> GT
+              <i class="fas fa-thermometer-half"></i> Busbar G Temp
             </h3>
             <div class="gauge">
               <div class="gauge-bg">
@@ -1028,26 +1048,6 @@
               </div>
             </div>
             <div class="status status-normal" id="gt-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> DBT
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="dbt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="dbt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="dbt-status">Normal</div>
           </div>
         </div>
         <!-- Gauge card end -->
