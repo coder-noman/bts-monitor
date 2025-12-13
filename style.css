@@ -1,7 +1,8 @@
         @import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap");
 
         :root {
-          --primary: #1e3c72;
+          --primary: linear-gradient(145deg, #1a2a3d, #152232);
+          --primary-first: #0f1c2d;
           --primary-light: #2a5298;
           --primary-dark: #2a5298;
           --secondary: #f8fafc;
@@ -22,7 +23,7 @@
         }
 
         body {
-          background-color: #f1f5f9;
+          background:var(--primary);
           color: var(--text);
           display: flex;
           min-height: 100vh;
@@ -31,13 +32,10 @@
         /* Sidebar Styles */
         .sidebar {
           width: 280px;
-          background: linear-gradient(180deg,
-              var(--primary) 0%,
-              var(--primary-dark) 100%);
+          background: var(--primary-first);
           color: white;
           display: flex;
           flex-direction: column;
-          box-shadow: var(--shadow);
           z-index: 100;
           height: 100vh;
           overflow-y: auto;
@@ -66,13 +64,13 @@
           top: 0;
           left: 0;
           z-index: 100;
-          background-color: #e0e0ff;
+          /* background:var(--primary); */
           transition: all 0.3s ease;
           padding: 0 6px;
         }
 
         .brand-img {
-          width: 28%;
+          width: 26%;
         }
 
         .brand2 {
@@ -186,7 +184,7 @@
 
         /* Navbar Styles */
         .navbar {
-          background-color: var(--card-bg);
+          background: var(--primary-first);
           padding: 1rem 1.5rem;
           box-shadow: var(--shadow);
           display: flex;
@@ -218,13 +216,14 @@
         .navbar-center h1 {
           font-size: 1.5rem;
           font-weight: 700;
-          color: var(--primary);
+          color: var(--card-bg);
         }
 
         .navbar-right {
           display: flex;
           align-items: center;
           gap: 1.5rem;
+          color: var(--card-bg);
         }
 
         .user-profile {
@@ -237,11 +236,11 @@
           width: 40px;
           height: 40px;
           border-radius: 50%;
-          background-color: var(--primary);
+          background-color: white;
           display: flex;
           align-items: center;
           justify-content: center;
-          color: white;
+          color: black;
           font-weight: bold;
         }
 
@@ -283,14 +282,13 @@
 
         .card {
           background-color: var(--card-bg);
-          border-radius: 0.75rem;
           box-shadow: var(--shadow);
           overflow: hidden;
           transition: transform 0.2s ease, box-shadow 0.2s ease;
         }
 
         .card-header {
-          background-color: var(--primary);
+          background: var(--primary-first);
           color: white;
           padding: 1rem 1.25rem;
           font-weight: 600;
@@ -386,8 +384,8 @@
         }
 
         .card-content::-webkit-scrollbar-thumb {
-          background: var(--primary-light);
-          border-radius: 10px;
+          background: var(--primary-first);
+          border-radius: 15px;
         }
 
         .card-content::-webkit-scrollbar-thumb:hover {
