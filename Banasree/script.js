@@ -1,5 +1,7 @@
 // Default Data Show Start
+let alarm_arr = [0, 0, 0, 0, 0];
 updateAllGauges(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+alarmData(alarm_arr);
 // Default Data Show end
 
 //.........websocket_client code Start..............
@@ -333,3 +335,61 @@ function updateAllGauges(pdb, ups1, ups2, sts, ground, bat1, bat2, rft, rrt, ot,
 
 // Initialize with current time
 updateLastSyncTime();
+
+// Other Alarm Unit start
+function alarmData(x) {
+    const alarmId = [
+        "water-leakage",
+        "fire-Alarm",
+        "generator-status",
+        "ups1-cb-status",
+        "ups2-cb-status",
+    ];
+    const alarmCardId = [
+        "Water Leakage",
+        "Fire-Alarm",
+        "Generator Status",
+        "Ups1 cb Status",
+        "Ups2 cb Status",
+    ];
+    const alarmData = [
+        ["Detected", "No Alarm"],
+        ["Detected", "No Alarm"],
+        ["Failed", "Running"],
+        ["Tripped", "ok"],
+        ["Tripped", "ok"],
+    ];
+
+    for (i = 0; i <= 4; i++) {
+        if (x[i] == 1) {
+            document.getElementById(alarmId[i]).innerText = alarmData[i][1];
+            document.getElementById(alarmId[i]).classList.add("on-btn");
+        } else {
+            document.getElementById(alarmId[i]).innerText = alarmData[i][0];
+            document.getElementById(alarmId[i]).classList.add("off-btn");
+            let ul = document.getElementById("alert-list");
+            let li = document.createElement("li");
+            li.classList.add("alert-list-card");
+            li.textContent = `${alarmCardId[i]} is ${alarmData[i][0]}`;
+            ul.appendChild(li);
+        }
+    }
+}
+function clearAllData() {
+    document.getElementById("alert-list").innerHTML = "";
+    const alarmId = [
+        "water-leakage",
+        "fire-Alarm",
+        "generator-status",
+        "ups1-cb-status",
+        "ups2-cb-status",
+    ];
+    for (let j = 0; j < alarmId.length; j++) {
+        const alarmElem = document.getElementById(alarmId[j]);
+        if (alarmElem) {
+            alarmElem.innerText = "";
+            alarmElem.className = "";
+        }
+    }
+}
+// Other Alarm Unit end

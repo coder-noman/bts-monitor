@@ -1,91 +1,89 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AdminSite</title>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
-    />
-    <!-- Chart js  -->
-    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
 
-    <!-- css -->
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AdminSite</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+  <!-- Chart js  -->
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+  <!-- css -->
   <link rel="stylesheet" href="style.css">
-  </head>
+</head>
 
-  <body>
-    <!-- Side Bar -->
-    <section id="sidebar">
-      <div class="brand">
-        <img class="brand-img" src="../images/link3.jpg" alt="" />
-        <div class="brand2">
-          <a href="#"><span class="logo">Infini</span>BOX</a>
-          <h5>
-            <span class="logo-text">Innovated by <br /></span>Link3 Technologies
-            LTD
-          </h5>
-        </div>
+<body>
+  <!-- Side Bar -->
+  <section id="sidebar">
+    <div class="brand">
+      <img class="brand-img" src="../images/link3.jpg" alt="" />
+      <div class="brand2">
+        <a href="#"><span class="logo">Infini</span>BOX</a>
+        <h5>
+          <span class="logo-text">Innovated by <br /></span>Link3 Technologies
+          LTD
+        </h5>
       </div>
-      <div class="side-menu">
-        <div class="last-update">
-          <p href="#" class="last-update-btn">Synced:</p>
-          <p class="last-update-time" id="lastUpdateTime"></p>
-          <p class="last-update-time" id="lastUpdateDate"></p>
-        </div>
+    </div>
+    <div class="side-menu">
+      <div class="last-update">
+        <p href="#" class="last-update-btn">Synced:</p>
+        <p class="last-update-time" id="lastUpdateTime"></p>
+        <p class="last-update-time" id="lastUpdateDate"></p>
       </div>
-      <!-- Alert Unit -->
-      <div class="alert">
-        <a href="#" class="alert-btn-upgrade">Alert Box</a>
-        <div class="wrapper">
-          <ul id="alert-list" class="alert-list"></ul>
-        </div>
+    </div>
+    <!-- Alert Unit -->
+    <div class="alert">
+      <a href="#" class="alert-btn-upgrade">Alert Box</a>
+      <div class="wrapper">
+        <ul id="alert-list" class="alert-list"></ul>
       </div>
+    </div>
 
-      <!-- Device Information -->
-      <div class="device">
-        <a href="#" class="device-btn-upgrade">Device Information</a>
-        <div class="device-wrapper">
-          <div class="device-wrapper-card">
-            <h5 class="device-label">LAN IP</h5>
-            <h5 class="device-value" id="device-lan">: 192.168.0.128</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">GSM Operator</h5>
-            <h5 class="device-value" id="gsm-operator">: GP</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">GSM Signal</h5>
-            <h5 class="device-value" id="gsm-signal">: 50</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">Internal Battery</h5>
-            <h5 class="device-value" id="internal-battery">: 4.1</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">PSU Status 1</h5>
-            <h5 class="device-value" id="device-psu1">: OK</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">PSU Status 2</h5>
-            <h5 class="device-value" id="device-psu2">: Ok</h5>
-          </div>
-
-          <div class="device-wrapper-card">
-            <h5 class="device-label">Data Path</h5>
-            <h5 class="device-value" id="data-source">: LAN</h5>
-          </div>
-
-          <ul id="alert-list" class="alert-list"></ul>
+    <!-- Device Information -->
+    <div class="device">
+      <a href="#" class="device-btn-upgrade">Device Information</a>
+      <div class="device-wrapper">
+        <div class="device-wrapper-card">
+          <h5 class="device-label">LAN IP</h5>
+          <h5 class="device-value" id="device-lan">: 192.168.0.128</h5>
         </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">GSM Operator</h5>
+          <h5 class="device-value" id="gsm-operator">: GP</h5>
+        </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">GSM Signal</h5>
+          <h5 class="device-value" id="gsm-signal">: 50</h5>
+        </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">Internal Battery</h5>
+          <h5 class="device-value" id="internal-battery">: 4.1</h5>
+        </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">PSU Status 1</h5>
+          <h5 class="device-value" id="device-psu1">: OK</h5>
+        </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">PSU Status 2</h5>
+          <h5 class="device-value" id="device-psu2">: Ok</h5>
+        </div>
+
+        <div class="device-wrapper-card">
+          <h5 class="device-label">Data Path</h5>
+          <h5 class="device-value" id="data-source">: LAN</h5>
+        </div>
+
+        <ul id="alert-list" class="alert-list"></ul>
       </div>
-      <!-- <div class="device">
+    </div>
+    <!-- <div class="device">
         <a href="#" class="device-btn-upgrade">Customer Service</a>
         <div class="device-wrapper">
           <div class="device-wrapper-card">
@@ -116,15 +114,15 @@
           <ul id="alert-list" class="alert-list"></ul>
         </div>
       </div> -->
-    </section>
+  </section>
 
-    <!-- Nav -->
-    <section id="content">
-      <nav>
-        <div class="breadcumb">
-          <h1 class="title">Dashboard: Banasree</h1>
-        </div>
-        <!-- <div class="profile-box">
+  <!-- Nav -->
+  <section id="content">
+    <nav>
+      <div class="breadcumb">
+        <h1 class="title">Dashboard: Banasree</h1>
+      </div>
+      <!-- <div class="profile-box">
           <h3 class="profile-user"><span>User:</span> Royal Agro Industries</h3>
           <span class="divider"></span>
           <div class="profile">
@@ -133,361 +131,418 @@
           <span class="divider"></span>
           <p class="logOut-btn" id="log-out">Log Out</p>
         </div> -->
-      </nav>
+    </nav>
 
-      <!-- Main -->
-      <main>
-        <!-- Gauge card start -->
-        <div class="gauges-container">
-          <!-- Row 1 -->
-          <div class="gauge-card">
-            <h3 class="gauge-title"><i class="fas fa-bolt"></i> PDB Voltage</h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="pdb-fill"></div>
+    <!-- Main -->
+    <main>
+      <!-- Gauge card start -->
+      <div class="gauges-container">
+        <!-- Row 1 -->
+        <div class="gauge-card">
+          <h3 class="gauge-title"><i class="fas fa-bolt"></i> PDB Voltage</h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="pdb-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="pdb-value">
+                0<span class="gauge-unit">V</span>
               </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="pdb-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>240V</span>
-                </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>240V</span>
               </div>
             </div>
-            <div class="status status-normal" id="pdb-status">Normal</div>
           </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title"><i class="fas fa-plug"></i> UPS1 Voltage</h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="ups1-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="ups1-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>240V</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="ups1-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title"><i class="fas fa-plug"></i> UPS2 Voltage</h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="ups2-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="ups2-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>240V</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="ups2-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title"><i class="fas fa-exchange-alt"></i> STS Voltage</h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="sts-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="sts-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>240V</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="sts-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-shield-alt"></i> Ground
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="grounds-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="grounds-value">
-                  0<span class="gauge-unit">Ω</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0Ω</span>
-                  <span>100Ω</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="grounds-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-battery-full"></i> Battery Bank 1
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="battery1-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="battery1-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>48V</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="battery1-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-battery-full"></i> Battery Bank 2
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="battery2-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="battery2-value">
-                  0<span class="gauge-unit">V</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0V</span>
-                  <span>48V</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="battery2-status">Normal</div>
-          </div>
-
-          <!-- Row 2 - New Added Gauges -->
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-tachometer-alt"></i> Rack Front Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="rft-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="rft-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>60°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="rft-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-tachometer-alt"></i> Rack Rear Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="rrt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="rrt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>60°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="rrt-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> Outside Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="ot-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="ot-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="ot-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> DB Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="dbt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="dbt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="dbt-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> Busbar P Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="bpt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="bpt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="bpt-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> Busbar N Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="bnt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="bnt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="bnt-status">Normal</div>
-          </div>
-          <div class="gauge-card">
-            <h3 class="gauge-title">
-              <i class="fas fa-thermometer-half"></i> Busbar G Temp
-            </h3>
-            <div class="gauge">
-              <div class="gauge-bg">
-                <div class="gauge-fill" id="bgt-fill"></div>
-              </div>
-              <div class="gauge-center">
-                <div class="gauge-value" id="bgt-value">
-                  0<span class="gauge-unit">°C</span>
-                </div>
-                <div class="gauge-minmax">
-                  <span>0°C</span>
-                  <span>100°C</span>
-                </div>
-              </div>
-            </div>
-            <div class="status status-normal" id="bgt-status">Normal</div>
-          </div>
+          <div class="status status-normal" id="pdb-status">Normal</div>
         </div>
-        <!-- Gauge card end -->
-
-        <!-- Circuit Breaker Row -->
-        <div class="cb-container">
-          <h3 class="cb-heading">
-            <i class="fas fa-toggle-on"></i> Circuit Breaker Status
+        <div class="gauge-card">
+          <h3 class="gauge-title"><i class="fas fa-plug"></i> UPS1 Voltage</h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="ups1-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="ups1-value">
+                0<span class="gauge-unit">V</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>240V</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="ups1-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title"><i class="fas fa-plug"></i> UPS2 Voltage</h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="ups2-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="ups2-value">
+                0<span class="gauge-unit">V</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>240V</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="ups2-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title"><i class="fas fa-exchange-alt"></i> STS Voltage</h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="sts-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="sts-value">
+                0<span class="gauge-unit">V</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>240V</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="sts-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-shield-alt"></i> Ground
           </h3>
-          <div class="cb-row">
-            <div class="cb-grid">
-              <div class="cb-title">Main CB</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
-              </div>
-              <div class="cb-label cb-on">ON</div>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="grounds-fill"></div>
             </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Ups1 CB</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="grounds-value">
+                0<span class="gauge-unit">Ω</span>
               </div>
-              <div class="cb-label cb-on">ON</div>
-            </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Ups2 CB</div>
-              <div class="cb-status">
-                <div class="cb-switch"></div>
+              <div class="gauge-minmax">
+                <span>0Ω</span>
+                <span>100Ω</span>
               </div>
-              <div class="cb-label cb-off">OFF</div>
-            </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Air Cooler CB</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
-              </div>
-              <div class="cb-label cb-on">ON</div>
-            </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Spare CB1</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
-              </div>
-              <div class="cb-label cb-on">ON</div>
-            </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Spare CB2</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
-              </div>
-              <div class="cb-label cb-on">ON</div>
-            </div>
-
-            <div class="cb-grid">
-              <div class="cb-title">Spare CB3</div>
-              <div class="cb-status">
-                <div class="cb-switch on"></div>
-              </div>
-              <div class="cb-label cb-on">ON</div>
             </div>
           </div>
+          <div class="status status-normal" id="grounds-status">Normal</div>
         </div>
-      </main>
-    </section>
-    <!-- Footer -->
-    <footer>
-      <p>&copy; 2025 Link3 Technologies LTD. All rights reserved.</p>
-    </footer>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
-     <script src="script.js"></script>
-     
-  </body>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-battery-full"></i> Battery Bank 1
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="battery1-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="battery1-value">
+                0<span class="gauge-unit">V</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>48V</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="battery1-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-battery-full"></i> Battery Bank 2
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="battery2-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="battery2-value">
+                0<span class="gauge-unit">V</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0V</span>
+                <span>48V</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="battery2-status">Normal</div>
+        </div>
+
+        <!-- Row 2 - New Added Gauges -->
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-tachometer-alt"></i> Rack Front Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="rft-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="rft-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>60°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="rft-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-tachometer-alt"></i> Rack Rear Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="rrt-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="rrt-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>60°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="rrt-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-thermometer-half"></i> Outside Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="ot-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="ot-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>100°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="ot-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-thermometer-half"></i> DB Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="dbt-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="dbt-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>100°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="dbt-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-thermometer-half"></i> Busbar P Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="bpt-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="bpt-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>100°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="bpt-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-thermometer-half"></i> Busbar N Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="bnt-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="bnt-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>100°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="bnt-status">Normal</div>
+        </div>
+        <div class="gauge-card">
+          <h3 class="gauge-title">
+            <i class="fas fa-thermometer-half"></i> Busbar G Temp
+          </h3>
+          <div class="gauge">
+            <div class="gauge-bg">
+              <div class="gauge-fill" id="bgt-fill"></div>
+            </div>
+            <div class="gauge-center">
+              <div class="gauge-value" id="bgt-value">
+                0<span class="gauge-unit">°C</span>
+              </div>
+              <div class="gauge-minmax">
+                <span>0°C</span>
+                <span>100°C</span>
+              </div>
+            </div>
+          </div>
+          <div class="status status-normal" id="bgt-status">Normal</div>
+        </div>
+      </div>
+      <!-- Gauge card end -->
+      <div class="dashboard">
+        <!-- <div class="chart-card">
+          <div class="chart-title">Temperature & Humidity</div>
+          <div class="chart-container">
+            <canvas id="environment-chart"></canvas>
+          </div>
+        </div> -->
+
+        <!-- Others Alarm unit -->
+        <section class="other-alarm-unit">
+          <h1 class="title">Advance Alarms</h1>
+          <br />
+          <div class="pss-card-box">
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>Water Leakage</h3>
+                <div class="psu-display">
+                  <p id="water-leakage">Alarm</p>
+                </div>
+              </div>
+            </div>
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>Fire Alarm</h3>
+                <div class="psu-display">
+                  <p id="fire-Alarm">No Alarm</p>
+                </div>
+              </div>
+            </div>
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>Generator</h3>
+                <div class="psu-display">
+                  <p id="generator-status">Running</p>
+                </div>
+              </div>
+            </div>
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>UPS1 CB Status</h3>
+                <div class="psu-display">
+                  <p id="ups1-cb-status">Tripped</p>
+                </div>
+              </div>
+            </div>
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>UPS2 CB Status</h3>
+                <div class="psu-display">
+                  <p id="ups2-cb-status">Ok</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+
+      <!-- Circuit Breaker Row -->
+      <div class="cb-container">
+        <h3 class="cb-heading">
+          <i class="fas fa-toggle-on"></i> Circuit Breaker Status
+        </h3>
+        <div class="cb-row">
+          <div class="cb-grid">
+            <div class="cb-title">Main CB</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Ups1 CB</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Ups2 CB</div>
+            <div class="cb-status">
+              <div class="cb-switch"></div>
+            </div>
+            <div class="cb-label cb-off">OFF</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Air Cooler CB</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Spare CB1</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Spare CB2</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+
+          <div class="cb-grid">
+            <div class="cb-title">Spare CB3</div>
+            <div class="cb-status">
+              <div class="cb-switch on"></div>
+            </div>
+            <div class="cb-label cb-on">ON</div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2025 Link3 Technologies LTD. All rights reserved.</p>
+  </footer>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script> -->
+  <script src="script.js"></script>
+
+</body>
+
 </html>
