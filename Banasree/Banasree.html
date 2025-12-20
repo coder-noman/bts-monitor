@@ -150,7 +150,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0V</span>
-                <span>240V</span>
+                <span>300V</span>
               </div>
             </div>
           </div>
@@ -168,7 +168,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0V</span>
-                <span>240V</span>
+                <span>300V</span>
               </div>
             </div>
           </div>
@@ -186,7 +186,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0V</span>
-                <span>240V</span>
+                <span>300V</span>
               </div>
             </div>
           </div>
@@ -204,7 +204,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0V</span>
-                <span>240V</span>
+                <span>300V</span>
               </div>
             </div>
           </div>
@@ -224,7 +224,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0Ω</span>
-                <span>100Ω</span>
+                <span>60Ω</span>
               </div>
             </div>
           </div>
@@ -243,8 +243,8 @@
                 0<span class="gauge-unit">V</span>
               </div>
               <div class="gauge-minmax">
-                <span>0V</span>
-                <span>48V</span>
+                <span>30V</span>
+                <span>60V</span>
               </div>
             </div>
           </div>
@@ -263,15 +263,15 @@
                 0<span class="gauge-unit">V</span>
               </div>
               <div class="gauge-minmax">
-                <span>0V</span>
-                <span>48V</span>
+                <span>30V</span>
+                <span>60V</span>
               </div>
             </div>
           </div>
           <div class="status status-normal" id="battery2-status">Normal</div>
         </div>
 
-        <!-- Row 2 - New Added Gauges -->
+        <!-- Row 2 - -->
         <div class="gauge-card">
           <h3 class="gauge-title">
             <i class="fas fa-tachometer-alt"></i> Rack Front Temp
@@ -286,7 +286,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>60°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -306,7 +306,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>60°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -326,7 +326,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>100°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -346,7 +346,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>100°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -366,7 +366,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>100°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -386,7 +386,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>100°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -406,7 +406,7 @@
               </div>
               <div class="gauge-minmax">
                 <span>0°C</span>
-                <span>100°C</span>
+                <span>65°C</span>
               </div>
             </div>
           </div>
@@ -415,12 +415,12 @@
       </div>
       <!-- Gauge card end -->
       <div class="dashboard">
-        <!-- <div class="chart-card">
-          <div class="chart-title">Temperature & Humidity</div>
+        <div class="chart-card">
+          <div class="chart-title">Load Data</div>
           <div class="chart-container">
-            <canvas id="environment-chart"></canvas>
+            <canvas id="voltage-chart"></canvas>
           </div>
-        </div> -->
+        </div>
 
         <!-- Others Alarm unit -->
         <section class="other-alarm-unit">
@@ -437,33 +437,41 @@
             </div>
             <div class="pss-card">
               <div class="pss-card-main">
-                <h3>Fire Alarm</h3>
+                <h3>Door Open</h3>
                 <div class="psu-display">
-                  <p id="fire-Alarm">No Alarm</p>
+                  <p id="door-open">Opened</p>
                 </div>
               </div>
             </div>
             <div class="pss-card">
               <div class="pss-card-main">
-                <h3>Generator</h3>
+                <h3>Human Presence</h3>
                 <div class="psu-display">
-                  <p id="generator-status">Running</p>
+                  <p id="human-presence">Motion Detected</p>
                 </div>
               </div>
             </div>
             <div class="pss-card">
               <div class="pss-card-main">
-                <h3>UPS1 CB Status</h3>
+                <h3>Smoke Sensor</h3>
                 <div class="psu-display">
-                  <p id="ups1-cb-status">Tripped</p>
+                  <p id="smoke-sensor">Detected</p>
                 </div>
               </div>
             </div>
             <div class="pss-card">
               <div class="pss-card-main">
-                <h3>UPS2 CB Status</h3>
+                <h3>Surge Protector Status</h3>
                 <div class="psu-display">
-                  <p id="ups2-cb-status">Ok</p>
+                  <p id="surge-protector-status">Fail</p>
+                </div>
+              </div>
+            </div>
+            <div class="pss-card">
+              <div class="pss-card-main">
+                <h3>Air Quality</h3>
+                <div class="psu-display">
+                  <p id="air-quality">Dirty</p>
                 </div>
               </div>
             </div>
@@ -488,9 +496,9 @@
           <div class="cb-grid">
             <div class="cb-title">Ups1 CB</div>
             <div class="cb-status">
-              <div class="cb-switch on"></div>
+              <div class="cb-switch "></div>
             </div>
-            <div class="cb-label cb-on">ON</div>
+            <div class="cb-label cb-off">OFF</div>
           </div>
 
           <div class="cb-grid">
