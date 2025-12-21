@@ -1,5 +1,4 @@
 // sidebar search funtionality start
-// BTS data mapping
 const btsData = {
     DHK282: "seed_store",
     DHK085: "Gulshan1",
@@ -152,7 +151,7 @@ function renderBTSList(filter = "") {
     filteredItems.forEach(([btsName, tableName]) => {
         const item = document.createElement("a");
         item.className = "dropdown-item";
-        item.href = `/${tableName}/${tableName}.html`;
+        item.href = `dashboard/dashboard.html?location=${tableName}`;
         item.innerHTML = `
                         <i class="fas fa-location-dot"></i>
                         ${tableName}
