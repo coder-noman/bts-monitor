@@ -369,7 +369,7 @@ function updateTable(tableName, data) {
     data.forEach(item => {
         const row = document.createElement('tr');
         row.innerHTML = `
-            <td><a href="/Banasree/Banasree.html">${item.btsName}</a></td>
+            <td><a href="dashboard/dashboard.html?location=${item.btsName}">${item.btsName}</a></td>
             <td>${item.zone}</td>
             <td>${item.unit}</td>
         `;

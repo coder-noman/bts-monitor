@@ -1,70 +1,124 @@
+// Get location from URL parameter
+function getLocationFromURL() {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get('location');
+}
+
+// Update page title with location
+function updatePageTitle(locationName) {
+    const titleElement = document.getElementById('pageTitle');
+    const formattedName = locationName
+        .replace(/_/g, " ")
+        .toLowerCase()
+        .split(" ")
+        .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+        .join(" ");
+    titleElement.textContent = `Dashboard: ${formattedName}`;
+    document.title = `AdminSite - ${formattedName}`;
+}
+
 let barChart;
-let ipduSum_arr = [10, 20, 30, 40, 20];
-const cbArr = [0, 1, 0, 1, 0, 1, 1];
-let alarm_arr = [0, 1, 1, 0, 0, 1];
+let loadDataArr = [0, 0, 0, 0, 0];
+const cbArr = [0, 0, 0, 0, 0, 0, 0];
+let alarm_arr = [0, 0, 0, 0, 0, 0];
+let currentLocation = '';
 
-// Default Data Show Start
-updateAllData(10, 20, 30, 10, 20, 57, 10, 20, 30, 10, 20, 30, 40, 20);
-updateBarChart();
-alarmData(alarm_arr);
-updateCircuitBreakerStatus(cbArr);
-// Default Data Show end
+function initializePage() {
+    currentLocation = getLocationFromURL();
+    updatePageTitle(currentLocation);
 
-// //.........websocket_client code Start..............
-var socket = new WebSocket("");
-socket.onmessage = function (event) {
-    const data = event.data.split(":");
-    const data_catagory = data[0] || "";
-    const msg = data[1] || "";
+    // Default Data Show
+    updateAllData(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0);
+    updateBarChart();
+    alarmData(alarm_arr);
+    updateCircuitBreakerStatus(cbArr);
+    initializeWebSocket();
+}
 
-    // checking data is coming or not start
-    if (data_catagory == "banasree") {
-        // Update last sync time
-        updateLastSyncTime();
-    } else {
-        return;
+function initializeWebSocket() {
+    var socket = new WebSocket("ws://27.147.170.162:81");
+
+    socket.onmessage = function (event) {
+        const data = event.data.split(":");
+        const data_category = data[0] || "";
+        const msg = data[1] || "";
+
+        // current location
+        if (data_category.toLowerCase() === currentLocation.toLowerCase()) {
+            updateLastSyncTime();
+
+            console.log(`Data for ${currentLocation}:`, msg);
+
+            var splited_data = msg.split(",");
+
+            // all gauges data
+            updateAllData(
+                splited_data[0],
+                splited_data[1],
+                splited_data[2],
+                splited_data[3],
+                splited_data[4],
+                splited_data[5],
+                splited_data[6],
+                splited_data[7],
+                splited_data[8],
+                splited_data[9],
+                splited_data[10],
+                splited_data[11],
+                splited_data[12],
+                splited_data[13]
+            );
+
+            // Bar Chart data
+            loadDataArr[0] = splited_data[14];
+            loadDataArr[1] = splited_data[15];
+            loadDataArr[2] = splited_data[16];
+            loadDataArr[3] = splited_data[17];
+            loadDataArr[4] = splited_data[18];
+            updateBarChart();
+
+            // alarm data
+            alarm_arr[0] = splited_data[19];
+            alarm_arr[1] = splited_data[20];
+            alarm_arr[2] = splited_data[21];
+            alarm_arr[3] = splited_data[22];
+            alarm_arr[4] = splited_data[23];
+            alarm_arr[5] = splited_data[24];
+            alarmData(alarm_arr)
+
+            // circuit breaker data
+
+            cbArr[0] = splited_data[25];
+            cbArr[1] = splited_data[26];
+            cbArr[2] = splited_data[27];
+            cbArr[3] = splited_data[28];
+            cbArr[4] = splited_data[29];
+            cbArr[5] = splited_data[30];
+            cbArr[6] = splited_data[31];
+            updateCircuitBreakerStatus(cbArr);
+
+
+            deviceInformation(
+                splited_data[32],
+                splited_data[33],
+                splited_data[34],
+                splited_data[35],
+                splited_data[36],
+                splited_data[37],
+                splited_data[38]
+            );
+
+            socket.onerror = function (error) {
+                console.error("WebSocket Error:", error);
+            };
+
+            socket.onclose = function () {
+                console.log("WebSocket connection closed. Attempting to reconnect...");
+                setTimeout(initializeWebSocket, 3000); // Reconnect after 3 seconds
+            };
+        }
     }
-
-    console.log(msg);
-    // checking data is coming or not end
-
-    // console.log("Data received:", data);
-    // console.log("Data received:", data_catagory);
-
-    var splited_data = msg;
-
-    console.log(splited_data[0]);
-    // Update all gauges with the received data
-    updateAllGauges(
-        splited_data[1],
-        splited_data[2],
-        splited_data[3],
-        splited_data[4],
-        splited_data[5],
-        splited_data[6],
-        splited_data[7],
-        splited_data[8],
-        splited_data[9],
-        splited_data[10],
-        splited_data[11],
-        splited_data[12],
-        splited_data[13],
-        splited_data[14]
-    );
-
-    // Update device information if available
-    if (splited_data.length >= 18) {
-        deviceInformation(
-            splited_data[15] || "192.168.0.128",  // LAN IP
-            splited_data[16] || "GP",             // GSM Operator
-            splited_data[17] || "50",             // GSM Signal
-            splited_data[18] || "4.1",            // Internal Battery
-            splited_data[19] || "1",              // PSU Status 1
-            splited_data[20] || "1",              // PSU Status 2
-            splited_data[21] || "0"               // Data Source
-        );
-    }
-};
+}
 
 // Update last sync time
 function updateLastSyncTime() {
@@ -74,16 +128,6 @@ function updateLastSyncTime() {
 
     document.getElementById("lastUpdateTime").textContent = timeString;
     document.getElementById("lastUpdateDate").textContent = dateString;
-}
-
-// .........websocket_client code end..............
-
-// Clear all data function
-function clearAllData() {
-    const alertList = document.getElementById("alert-list");
-    if (alertList) {
-        alertList.innerHTML = "";
-    }
 }
 
 // device Information start
@@ -111,34 +155,26 @@ function deviceInformation(lan, gsmOp, gsmSig, ib, psu1, psu2, ds) {
     // Psu Status 1
     if (psu1 == 1) {
         devicePsu1.innerText = `: OK`;
-        devicePsu1.style.color = "#4ECDC4";
     } else {
         devicePsu1.innerText = `: Failed`;
-        devicePsu1.style.color = "#FC5C65";
     }
 
     // Psu Status 2
     if (psu2 == 1) {
         devicePsu2.innerText = `: OK`;
-        devicePsu2.style.color = "#4ECDC4";
     } else {
         devicePsu2.innerText = `: Failed`;
-        devicePsu2.style.color = "#FC5C65";
     }
 
     // Data Source
     if (ds == 0) {
         dataSource.innerText = `: LAN`;
-        dataSource.style.color = "#4ECDC4";
     } else if (ds == 1) {
         dataSource.innerText = `: WIFI`;
-        dataSource.style.color = "#FE9B13";
     } else if (ds == 2) {
         dataSource.innerText = `: GPRS`;
-        dataSource.style.color = "#FE9B13";
     }
 }
-// device Information end
 
 // gauge data start
 function gaugeAlert(data, status) {
@@ -148,6 +184,7 @@ function gaugeAlert(data, status) {
     li.textContent = `${data} is ${status}.`;
     ul.appendChild(li);
 }
+
 function getColor(value, ranges) {
     if (value >= ranges.green[0] && value <= ranges.green[1]) {
         return "#4ECDC4";
@@ -236,6 +273,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (ups2Voltage >= 231 && ups2Voltage <= 300) {
         gaugeAlert("UPS2 Voltage", "high");
     }
+
     const stsVoltage = d;
     updateGauge("sts", stsVoltage, {
         green: [211, 230],
@@ -249,6 +287,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (stsVoltage >= 231 && stsVoltage <= 300) {
         gaugeAlert("STS Voltage", "high");
     }
+
     const groundVoltage = e;
     updateGauge("grounds", groundVoltage, {
         green: [0, 5],
@@ -266,8 +305,8 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     const batteryVoltage1 = f;
     updateGauge("battery1", batteryVoltage1, {
         green: [48, 57],
-        orange: [58, 60],
-        red: [30, 47],
+        orange: [57.1, 60],
+        red: [0, 47.9],
         max: 60,
     });
 
@@ -276,6 +315,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (batteryVoltage1 >= 58 && batteryVoltage1 <= 60) {
         gaugeAlert("Battery1 Voltage", "very Low");
     }
+
     const batteryVoltage2 = g;
     updateGauge("battery2", batteryVoltage2, {
         green: [48, 57],
@@ -303,6 +343,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (rackFrontTemp >= 32 && rackFrontTemp <= 55) {
         gaugeAlert("Rack Front Temperature", "very high");
     }
+
     const rackRearTemp = i;
     updateGauge("rrt", rackRearTemp, {
         green: [0, 30],
@@ -316,6 +357,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (rackRearTemp >= 32 && rackRearTemp <= 55) {
         gaugeAlert("Rack Rear Temperature", "very high");
     }
+
     const outSideTemp = j;
     updateGauge("ot", outSideTemp, {
         green: [0, 32],
@@ -329,6 +371,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (outSideTemp >= 32 && outSideTemp <= 55) {
         gaugeAlert("Outside Temperature", "very high");
     }
+
     const dbTemp = k;
     updateGauge("dbt", dbTemp, {
         green: [0, 33],
@@ -342,6 +385,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (dbTemp >= 32 && dbTemp <= 55) {
         gaugeAlert("DB Temperature", "very high");
     }
+
     const busBarPTemp = l;
     updateGauge("bpt", busBarPTemp, {
         green: [0, 35],
@@ -355,6 +399,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (busBarPTemp >= 32 && busBarPTemp <= 55) {
         gaugeAlert("Busbar P Temp", "very high");
     }
+
     const busBarNTemp = m;
     updateGauge("bnt", busBarNTemp, {
         green: [0, 35],
@@ -368,6 +413,7 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (busBarNTemp >= 32 && busBarNTemp <= 55) {
         gaugeAlert("Busbar N Temp", "very high");
     }
+
     const busBarGTemp = n;
     updateGauge("bgt", busBarGTemp, {
         green: [0, 35],
@@ -381,14 +427,12 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     } else if (busBarGTemp >= 32 && busBarGTemp <= 55) {
         gaugeAlert("Busbar G Temp", "very high");
     }
-
 }
 
 // chart start
 let color = "white";
 
 function initializeCharts() {
-
     const voltageCtx = document.getElementById("voltage-chart").getContext("2d");
     barChart = new Chart(voltageCtx, {
         type: "bar",
@@ -397,7 +441,7 @@ function initializeCharts() {
             datasets: [
                 {
                     label: "Load (VA)",
-                    data: ipduSum_arr,
+                    data: loadDataArr,
                     backgroundColor: [
                         "rgba(78, 205, 196, 0.7)",
                         "#e2111b9a",
@@ -446,16 +490,12 @@ function initializeCharts() {
     });
 }
 
-window.addEventListener("load", initializeCharts);
 function updateBarChart() {
-    console.log("ipduSum_arr update= ", ipduSum_arr);
     if (barChart) {
-        barChart.data.datasets[0].data = ipduSum_arr;
+        barChart.data.datasets[0].data = loadDataArr;
         barChart.update("none");
     }
 }
-
-// chart end
 
 // Other Alarm Unit start
 function alarmData(x) {
@@ -481,16 +521,19 @@ function alarmData(x) {
         ["Detected", "Not Detected"],
         ["Detected", "Not Detected"],
         ["Fail", "Active"],
-        ["Dirty", "Freash"],
+        ["Dirty", "Fresh"],
     ];
+
+    // Clear alert list
+    clearAllData();
 
     for (i = 0; i <= 5; i++) {
         if (x[i] == 1) {
             document.getElementById(alarmId[i]).innerText = alarmData[i][1];
-            document.getElementById(alarmId[i]).classList.add("on-btn");
+            document.getElementById(alarmId[i]).className = "on-btn";
         } else {
             document.getElementById(alarmId[i]).innerText = alarmData[i][0];
-            document.getElementById(alarmId[i]).classList.add("off-btn");
+            document.getElementById(alarmId[i]).className = "off-btn";
             let ul = document.getElementById("alert-list");
             let li = document.createElement("li");
             li.classList.add("alert-list-card");
@@ -499,6 +542,7 @@ function alarmData(x) {
         }
     }
 }
+
 function clearAllData() {
     document.getElementById("alert-list").innerHTML = "";
     const alarmId = [
@@ -517,31 +561,25 @@ function clearAllData() {
         }
     }
 }
-// Other Alarm Unit end
 
 // Circuit Breaker Start
 function updateCircuitBreakerStatus(cbData) {
     const cbGrids = document.querySelectorAll('.cb-grid');
 
-    // Update each circuit breaker
     for (let i = 0; i < 7; i++) {
         const cbGrid = cbGrids[i];
         const status = cbData[i];
 
-        // Get the switch element
         const cbSwitch = cbGrid.querySelector('.cb-switch');
-        // Get the label element
         const cbLabel = cbGrid.querySelector('.cb-label');
 
-        if (status === 1) {
-            // ON state - Green
+        if (status == 1) {
             cbSwitch.classList.add('on');
             cbSwitch.classList.remove('off');
             cbSwitch.style.backgroundColor = '#4ECDC4';
             cbLabel.textContent = 'ON';
             cbLabel.className = 'cb-label cb-on';
-        } else if (status === 0) {
-            // OFF state - Red
+        } else if (status == 0) {
             cbSwitch.classList.remove('on');
             cbSwitch.classList.add('off');
             cbSwitch.style.backgroundColor = '#FC5C65';
@@ -550,4 +588,9 @@ function updateCircuitBreakerStatus(cbData) {
         }
     }
 }
-// Circuit Breaker end
+
+// Initialize the page when DOM is loaded
+document.addEventListener('DOMContentLoaded', function () {
+    initializeCharts();
+    initializePage();
+});
