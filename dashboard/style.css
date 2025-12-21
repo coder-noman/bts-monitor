@@ -155,7 +155,7 @@ a {
   white-space: nowrap;
 }
 
-.side-menu > a {
+.side-menu>a {
   background: var(--grey2);
   color: var(--light);
 }
@@ -314,6 +314,18 @@ nav {
   top: 0;
   left: 0;
   z-index: 100;
+}
+
+.back-btn {
+  padding: 5px 10px;
+  font-size: 18px;
+  font-weight: 500;
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.back-btn i {
+  margin-right: 8px;
 }
 
 .breadcumb {
@@ -503,14 +515,17 @@ main h1 {
   text-align: center;
   margin-top: 20px;
 }
+
 /* Add pulse animation for warning and danger statuses */
 @keyframes pulse {
   0% {
     opacity: 1;
   }
+
   50% {
     opacity: 0.7;
   }
+
   100% {
     opacity: 1;
   }
@@ -519,6 +534,7 @@ main h1 {
 .status.pulse {
   animation: pulse 1s infinite;
 }
+
 /* gauge end */
 
 /* button */
@@ -564,6 +580,7 @@ main h1 {
   height: 90%;
   width: 100%;
 }
+
 /* chart end */
 
 /* Advance Alarm start */

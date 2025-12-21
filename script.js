@@ -253,96 +253,96 @@ generateTables();
 // Data sets for each table
 tableDataSets = {
     "BTS Down List": [
-        { btsName: "Gulshan1", zone: "Downtown", time: "2h 15m" },
-        { btsName: "Gazipur", zone: "North Area", time: "45m" },
+        { btsName: "Gulshan1", zone: "Downtown", unit: "2h 15m" },
+        { btsName: "Gazipur", zone: "North Area", unit: "45m" },
 
     ],
     "UPS1 Fail List": [
-        { btsName: "Concord", zone: "Commercial", time: "3h 20m" },
-        { btsName: "Dilkusha", zone: "Residential", time: "1h 10m" },
-        { btsName: "Imamganj", zone: "Downtown", time: "45m" }
+        { btsName: "Concord", zone: "Commercial", unit: "3h 20m" },
+        { btsName: "Dilkusha", zone: "Residential", unit: "1h 10m" },
+        { btsName: "Imamganj", zone: "Downtown", unit: "45m" }
     ],
     "UPS2 Fail List": [
-        { btsName: "Narayangonj", zone: "Port Area", time: "2h 5m" },
-        { btsName: "Shiddirgonj", zone: "Industrial", time: "50m" }
+        { btsName: "Narayangonj", zone: "Port Area", unit: "2h 5m" },
+        { btsName: "Shiddirgonj", zone: "Industrial", unit: "50m" }
     ],
     "PDB Down List": [
-        { btsName: "Joypara", zone: "Suburban", time: "4h 15m" },
-        { btsName: "Ghorashal", zone: "Industrial", time: "2h 30m" },
-        { btsName: "Madhobdi", zone: "Rural", time: "1h 45m" }
+        { btsName: "Joypara", zone: "Suburban", unit: "4h 15m" },
+        { btsName: "Ghorashal", zone: "Industrial", unit: "2h 30m" },
+        { btsName: "Madhobdi", zone: "Rural", unit: "1h 45m" }
     ],
     "High Temperature List": [
-        { btsName: "Brahmanbaria", zone: "Commercial", time: "3h 20m" },
-        { btsName: "Kishorganj", zone: "Residential", time: "2h 10m" },
-        { btsName: "Bhairab", zone: "Industrial", time: "1h 5m" }
+        { btsName: "Brahmanbaria", zone: "Commercial", unit: "3h 20m" },
+        { btsName: "Kishorganj", zone: "Residential", unit: "2h 10m" },
+        { btsName: "Bhairab", zone: "Industrial", unit: "1h 5m" }
     ],
     "PDB High Voltage List": [
-        { btsName: "Monipuri_Para", zone: "Residential", time: "6h 15m" },
-        { btsName: "Nikunja", zone: "Commercial", time: "4h 30m" }
+        { btsName: "Monipuri_Para", zone: "Residential", unit: "6h 15m" },
+        { btsName: "Nikunja", zone: "Commercial", unit: "4h 30m" }
     ],
     "PDB Low Voltage List": [
-        { btsName: "Eskaton", zone: "Downtown", time: "5h 20m" },
-        { btsName: "Banasree", zone: "Residential", time: "3h 45m" },
-        { btsName: "Mawna", zone: "Rural", time: "2h 10m" }
+        { btsName: "Eskaton", zone: "Downtown", unit: "5h 20m" },
+        { btsName: "Banasree", zone: "Residential", unit: "3h 45m" },
+        { btsName: "Mawna", zone: "Rural", unit: "2h 10m" }
     ],
     "Battery Low List 48v": [
-        { btsName: "Hatirpul", zone: "Commercial", time: "8h 15m" },
-        { btsName: "Mohammadpur", zone: "Residential", time: "6h 30m" },
-        { btsName: "Mirpur_DOHS", zone: "Upscale", time: "4h 45m" }
+        { btsName: "Hatirpul", zone: "Commercial", unit: "8h 15m" },
+        { btsName: "Mohammadpur", zone: "Residential", unit: "6h 30m" },
+        { btsName: "Mirpur_DOHS", zone: "Upscale", unit: "4h 45m" }
     ],
     "Battery Low List 12v": [
-        { btsName: "Bashundhara_D", zone: "Commercial", time: "7h 20m" },
-        { btsName: "Bashundhara_I", zone: "Industrial", time: "5h 35m" },
-        { btsName: "Wari", zone: "Old Town", time: "3h 50m" }
+        { btsName: "Bashundhara_D", zone: "Commercial", unit: "7h 20m" },
+        { btsName: "Bashundhara_I", zone: "Industrial", unit: "5h 35m" },
+        { btsName: "Wari", zone: "Old Town", unit: "3h 50m" }
     ],
     "Door Open": [
-        { btsName: "Uttara_Sector_13", zone: "Residential", time: "2h 15m" },
-        { btsName: "Manikganj", zone: "District", time: "1h 30m" }
+        { btsName: "Uttara_Sector_13", zone: "Residential", unit: "2h 15m" },
+        { btsName: "Manikganj", zone: "District", unit: "1h 30m" }
     ],
     "Human Presence": [
-        { btsName: "Mirpur_2", zone: "Commercial", time: "45m" },
-        { btsName: "Munshiganj", zone: "District", time: "30m" },
-        { btsName: "Jamgora", zone: "Rural", time: "15m" }
+        { btsName: "Mirpur_2", zone: "Commercial", unit: "45m" },
+        { btsName: "Munshiganj", zone: "District", unit: "30m" },
+        { btsName: "Jamgora", zone: "Rural", unit: "15m" }
     ],
     "Water Leakage": [
-        { btsName: "Tongi", zone: "Industrial", time: "3h 20m" },
-        { btsName: "Lalmatia", zone: "Residential", time: "2h 45m" }
+        { btsName: "Tongi", zone: "Industrial", unit: "3h 20m" },
+        { btsName: "Lalmatia", zone: "Residential", unit: "2h 45m" }
     ],
     "Generator": [
-        { btsName: "Agargaon", zone: "Commercial", time: "6h 15m" },
-        { btsName: "Cumilla", zone: "District", time: "4h 30m" },
-        { btsName: "Chandpur", zone: "Port Area", time: "2h 45m" }
+        { btsName: "Agargaon", zone: "Commercial", unit: "6h 15m" },
+        { btsName: "Cumilla", zone: "District", unit: "4h 30m" },
+        { btsName: "Chandpur", zone: "Port Area", unit: "2h 45m" }
     ],
-    "UPS1 CB": [
-        { btsName: "Shimultoli", zone: "Residential", time: "5h 20m" },
-        { btsName: "Akhaura", zone: "Border", time: "3h 35m" }
+    "UPS1 CB Tripped": [
+        { btsName: "Shimultoli", zone: "Residential", unit: "5h 20m" },
+        { btsName: "Akhaura", zone: "Border", unit: "3h 35m" }
     ],
-    "UPS2 CB": [
-        { btsName: "Ashuganj", zone: "Industrial", time: "4h 15m" },
-        { btsName: "Dakshinkhan", zone: "Suburban", time: "2h 30m" }
+    "UPS2 CB Tripped": [
+        { btsName: "Ashuganj", zone: "Industrial", unit: "4h 15m" },
+        { btsName: "Dakshinkhan", zone: "Suburban", unit: "2h 30m" }
     ],
-    "Main CB": [
-        { btsName: "Haluaghat", zone: "Rural", time: "7h 20m" },
-        { btsName: "Chauddagram", zone: "District", time: "5h 45m" },
-        { btsName: "West_Nakhalpara", zone: "Residential", time: "3h 10m" }
+    "Main CB Tripped": [
+        { btsName: "Haluaghat", zone: "Rural", unit: "7h 20m" },
+        { btsName: "Chauddagram", zone: "District", unit: "5h 45m" },
+        { btsName: "West_Nakhalpara", zone: "Residential", unit: "3h 10m" }
     ],
     "LAN Communication Fail": [
-        { btsName: "Trishal", zone: "Rural", time: "6h 15m" },
-        { btsName: "Shahjadpur", zone: "District", time: "4h 30m" }
+        { btsName: "Trishal", zone: "Rural", unit: "6h 15m" },
+        { btsName: "Shahjadpur", zone: "District", unit: "4h 30m" }
     ],
-    "Communication Fail List": [
-        { btsName: "Salna", zone: "Industrial", time: "8h 20m" },
-        { btsName: "Sakhipur", zone: "Rural", time: "6h 35m" },
-        { btsName: "Dhamrai", zone: "District", time: "4h 50m" }
+    "All Communication Fail": [
+        { btsName: "Salna", zone: "Industrial", unit: "8h 20m" },
+        { btsName: "Sakhipur", zone: "Rural", unit: "6h 35m" },
+        { btsName: "Dhamrai", zone: "District", unit: "4h 50m" }
     ],
     "Poor Network List": [
-        { btsName: "Valuka", zone: "Remote", time: "9h 15m" },
-        { btsName: "Shahjanpur", zone: "Rural", time: "7h 30m" }
+        { btsName: "Valuka", zone: "Remote", unit: "9h 15m" },
+        { btsName: "Shahjanpur", zone: "Rural", unit: "7h 30m" }
     ],
     "Grounding Fail List": [
-        { btsName: "Goforgaon", zone: "Agricultural", time: "10h 20m" },
-        { btsName: "Nowjor", zone: "Remote", time: "8h 45m" },
-        { btsName: "East_Nakhalpara", zone: "Residential", time: "6h 10m" }
+        { btsName: "Goforgaon", zone: "Agricultural", unit: "10h 20m" },
+        { btsName: "Nowjor", zone: "Remote", unit: "8h 45m" },
+        { btsName: "East_Nakhalpara", zone: "Residential", unit: "6h 10m" }
     ]
 };
 
@@ -368,8 +368,14 @@ function updateTable(tableName, data) {
 
     data.forEach(item => {
         const row = document.createElement('tr');
+        const formattedName = item.btsName
+            .replace(/_/g, " ")
+            .toLowerCase()
+            .split(" ")
+            .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+            .join(" ");
         row.innerHTML = `
-            <td><a href="dashboard/dashboard.html?location=${item.btsName}">${item.btsName}</a></td>
+            <td><a class="table-bts-name" href="dashboard/dashboard.html?location=${item.btsName}">${formattedName}</a></td>
             <td>${item.zone}</td>
             <td>${item.unit}</td>
         `;

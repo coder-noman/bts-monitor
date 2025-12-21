@@ -1,7 +1,7 @@
 // Get location from URL parameter
 function getLocationFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
-    return urlParams.get('location');
+    return urlParams.get('location') || 'banasree';
 }
 
 // Update page title with location
