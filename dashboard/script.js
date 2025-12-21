@@ -47,9 +47,11 @@ function initializeWebSocket() {
         if (data_category.toLowerCase() === currentLocation.toLowerCase()) {
             updateLastSyncTime();
 
-            console.log(`Data for ${currentLocation}:`, msg);
+            // console.log(`Data for ${currentLocation}:`, msg);
 
             var splited_data = msg.split(",");
+
+            clearAllData();
 
             // all gauges data
             updateAllData(
@@ -178,6 +180,7 @@ function deviceInformation(lan, gsmOp, gsmSig, ib, psu1, psu2, ds) {
 
 // gauge data start
 function gaugeAlert(data, status) {
+    console.log(data, status);
     let ul = document.getElementById("alert-list");
     let li = document.createElement("li");
     li.classList.add("alert-list-card");
@@ -234,15 +237,15 @@ function updateGauge(elementId, value, ranges) {
 function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     const pdbVoltage = a;
     updateGauge("pdb", pdbVoltage, {
-        green: [180, 260],
+        green: [181, 270],
         orange: [0, 180],
-        red: [261, 300],
+        red: [271, 300],
         max: 300,
     });
 
     if (pdbVoltage >= 0 && pdbVoltage <= 180) {
         gaugeAlert("PDB Voltage", "low");
-    } else if (pdbVoltage >= 261 && pdbVoltage <= 300) {
+    } else if (pdbVoltage >= 271 && pdbVoltage <= 300) {
         gaugeAlert("PDB Voltage", "high");
     }
 
@@ -291,140 +294,140 @@ function updateAllData(a, b, c, d, e, f, g, h, i, j, k, l, m, n) {
     const groundVoltage = e;
     updateGauge("grounds", groundVoltage, {
         green: [0, 5],
-        orange: [6, 10],
-        red: [11, 60],
+        orange: [5.1, 15.9],
+        red: [16, 60],
         max: 60,
     });
 
-    if (groundVoltage >= 0 && groundVoltage <= 5) {
+    if (groundVoltage >= 5.1 && groundVoltage <= 15.9) {
         gaugeAlert("Ground Voltage", "low");
-    } else if (groundVoltage >= 11 && groundVoltage <= 60) {
+    } else if (groundVoltage >= 16 && groundVoltage <= 60) {
         gaugeAlert("Ground Voltage", "high");
     }
 
     const batteryVoltage1 = f;
     updateGauge("battery1", batteryVoltage1, {
         green: [48, 57],
-        orange: [57.1, 60],
-        red: [0, 47.9],
+        orange: [0, 47.9],
+        red: [57.1, 60],
         max: 60,
     });
 
-    if (batteryVoltage1 >= 30 && batteryVoltage1 <= 47) {
+    if (batteryVoltage1 >= 0 && batteryVoltage1 <= 47.9) {
         gaugeAlert("Battery1 Voltage", "low");
-    } else if (batteryVoltage1 >= 58 && batteryVoltage1 <= 60) {
-        gaugeAlert("Battery1 Voltage", "very Low");
+    } else if (batteryVoltage1 >= 57.1 && batteryVoltage1 <= 60) {
+        gaugeAlert("Battery1 Voltage", "High");
     }
 
     const batteryVoltage2 = g;
     updateGauge("battery2", batteryVoltage2, {
         green: [48, 57],
-        orange: [58, 60],
-        red: [30, 47],
+        orange: [0, 47.9],
+        red: [57.1, 60],
         max: 60,
     });
 
-    if (batteryVoltage2 >= 30 && batteryVoltage2 <= 47) {
+    if (batteryVoltage2 >= 0 && batteryVoltage2 <= 47.9) {
         gaugeAlert("Battery2 Voltage", "low");
-    } else if (batteryVoltage2 >= 58 && batteryVoltage2 <= 220) {
-        gaugeAlert("Battery2 Voltage", "very Low");
+    } else if (batteryVoltage2 >= 57.1 && batteryVoltage2 <= 60) {
+        gaugeAlert("Battery2 Voltage", "High");
     }
 
     const rackFrontTemp = h;
     updateGauge("rft", rackFrontTemp, {
-        green: [0, 30],
-        orange: [31, 35],
+        green: [0, 30.9],
+        orange: [31, 35.9],
         red: [36, 65],
         max: 65,
     });
 
-    if (rackFrontTemp >= 26 && rackFrontTemp <= 31) {
+    if (rackFrontTemp >= 31 && rackFrontTemp <= 35.9) {
         gaugeAlert("Rack Front Temperature", "high");
-    } else if (rackFrontTemp >= 32 && rackFrontTemp <= 55) {
+    } else if (rackFrontTemp >= 36 && rackFrontTemp <= 65) {
         gaugeAlert("Rack Front Temperature", "very high");
     }
 
     const rackRearTemp = i;
     updateGauge("rrt", rackRearTemp, {
-        green: [0, 30],
-        orange: [31, 35],
+        green: [0, 30.9],
+        orange: [31, 35.9],
         red: [36, 65],
         max: 65,
     });
 
-    if (rackRearTemp >= 26 && rackRearTemp <= 31) {
+    if (rackRearTemp >= 31 && rackRearTemp <= 35.9) {
         gaugeAlert("Rack Rear Temperature", "high");
-    } else if (rackRearTemp >= 32 && rackRearTemp <= 55) {
+    } else if (rackRearTemp >= 36 && rackRearTemp <= 65) {
         gaugeAlert("Rack Rear Temperature", "very high");
     }
 
     const outSideTemp = j;
     updateGauge("ot", outSideTemp, {
-        green: [0, 32],
-        orange: [33, 37],
+        green: [0, 32.9],
+        orange: [33, 37.9],
         red: [38, 65],
         max: 65,
     });
 
-    if (outSideTemp >= 26 && outSideTemp <= 31) {
+    if (outSideTemp >= 33 && outSideTemp <= 37.9) {
         gaugeAlert("Outside Temperature", "high");
-    } else if (outSideTemp >= 32 && outSideTemp <= 55) {
+    } else if (outSideTemp >= 38 && outSideTemp <= 65) {
         gaugeAlert("Outside Temperature", "very high");
     }
 
     const dbTemp = k;
     updateGauge("dbt", dbTemp, {
-        green: [0, 33],
-        orange: [34, 38],
+        green: [0, 33.9],
+        orange: [34, 38.9],
         red: [39, 65],
         max: 65,
     });
 
-    if (dbTemp >= 26 && dbTemp <= 31) {
+    if (dbTemp >= 34 && dbTemp <= 38.9) {
         gaugeAlert("DB Temperature", "high");
-    } else if (dbTemp >= 32 && dbTemp <= 55) {
+    } else if (dbTemp >= 39 && dbTemp <= 65) {
         gaugeAlert("DB Temperature", "very high");
     }
 
     const busBarPTemp = l;
     updateGauge("bpt", busBarPTemp, {
-        green: [0, 35],
-        orange: [36, 42],
+        green: [0, 35.9],
+        orange: [36, 42.9],
         red: [43, 65],
         max: 65,
     });
 
-    if (busBarPTemp >= 26 && busBarPTemp <= 31) {
+    if (busBarPTemp >= 36 && busBarPTemp <= 42.9) {
         gaugeAlert("Busbar P Temp", "high");
-    } else if (busBarPTemp >= 32 && busBarPTemp <= 55) {
+    } else if (busBarPTemp >= 43 && busBarPTemp <= 65) {
         gaugeAlert("Busbar P Temp", "very high");
     }
 
     const busBarNTemp = m;
     updateGauge("bnt", busBarNTemp, {
-        green: [0, 35],
-        orange: [36, 42],
+        green: [0, 35.9],
+        orange: [36, 42.9],
         red: [43, 65],
         max: 65,
     });
 
-    if (busBarNTemp >= 26 && busBarNTemp <= 31) {
+    if (busBarNTemp >= 36 && busBarNTemp <= 42.9) {
         gaugeAlert("Busbar N Temp", "high");
-    } else if (busBarNTemp >= 32 && busBarNTemp <= 55) {
+    } else if (busBarNTemp >= 43 && busBarNTemp <= 65) {
         gaugeAlert("Busbar N Temp", "very high");
     }
 
     const busBarGTemp = n;
     updateGauge("bgt", busBarGTemp, {
-        green: [0, 35],
-        orange: [36, 42],
+        green: [0, 35.9],
+        orange: [36, 42.9],
         red: [43, 65],
         max: 65,
     });
 
-    if (busBarGTemp >= 26 && busBarGTemp <= 31) {
+    if (busBarGTemp >= 36 && busBarGTemp <= 42.9) {
         gaugeAlert("Busbar G Temp", "high");
-    } else if (busBarGTemp >= 32 && busBarGTemp <= 55) {
+    } else if (busBarGTemp >= 43 && busBarGTemp <= 65) {
         gaugeAlert("Busbar G Temp", "very high");
     }
 }
@@ -523,9 +526,6 @@ function alarmData(x) {
         ["Fail", "Active"],
         ["Dirty", "Fresh"],
     ];
-
-    // Clear alert list
-    clearAllData();
 
     for (i = 0; i <= 5; i++) {
         if (x[i] == 1) {
