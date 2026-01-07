@@ -283,14 +283,18 @@ body {
 }
 
 .card {
-  background-color: var(--card-bg);
+  /* background-color: var(--card-bg); */
+  color: white;
+  background-color: #323030c4;
   box-shadow: var(--shadow);
   overflow: hidden;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  border-radius: 10px;
 }
 
 .card-header {
   background: var(--primary-first);
+  /* background: var(--blue); */
   color: white;
   padding: 1rem 1.25rem;
   font-weight: 600;
@@ -319,9 +323,10 @@ body {
   text-align: left;
   padding: 0.75rem;
   border-bottom: 1px solid var(--border);
-  color: var(--text-light);
+  /* color: var(--text-light); */
+  color: var(--green);
   font-weight: 600;
-  font-size: 0.875rem;
+  font-size: 0.975rem;
 }
 
 .table td {
@@ -333,7 +338,7 @@ body {
 
 .table-bts-name {
   text-decoration: none;
-  color: #1E293B;
+  color: white;
 }
 
 .table tr:last-child td {
