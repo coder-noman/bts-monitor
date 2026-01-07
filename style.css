@@ -12,6 +12,9 @@
   --border: #e2e8f0;
   --card-bg: #ffffff;
   --shadow: 0 4px 6px 3px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  --green: #4ecdc4;
+  --red: #fc5c65;
+  --blue: #3867d6;
 }
 
 * {

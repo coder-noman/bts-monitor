@@ -44,10 +44,10 @@ function initializeWebSocket() {
         const msg = data[1] || "";
 
         // current location
-        if (data_category.toLowerCase() === currentLocation.toLowerCase()) {
+        if (data_category.toLowerCase() == currentLocation.toLowerCase()) {
             updateLastSyncTime();
 
-            // console.log(`Data for ${currentLocation}:`, msg);
+            console.log(`Data for ${currentLocation}:`, msg);
 
             var splited_data = msg.split(",");
 
@@ -180,7 +180,6 @@ function deviceInformation(lan, gsmOp, gsmSig, ib, psu1, psu2, ds) {
 
 // gauge data start
 function gaugeAlert(data, status) {
-    console.log(data, status);
     let ul = document.getElementById("alert-list");
     let li = document.createElement("li");
     li.classList.add("alert-list-card");
