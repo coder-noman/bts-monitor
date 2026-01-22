@@ -23,17 +23,33 @@
         </div>
         <div class="sidebar-header">
             <div class="search-container">
-                <input type="text" id="searchInput" placeholder="Search BTS locations...">
+                <input type="text" id="btsSearchInput" placeholder="Search BTS by name...">
             </div>
-            
-            <div class="dropdown-title">
-                <i class="fas fa-list"></i>
-                BTS List
+
+            <div id="searchResults" style="display: none;">
+                <div class="dropdown-title">
+                    <i class="fas fa-search"></i>
+                    Search Results
+                </div>
+                <div class="dropdown-list" id="searchResultsList">
+                </div>
             </div>
-            
-            <div class="dropdown-list" id="btsList">
-                <!-- BTS items will be populated by JavaScript -->
+
+            <div id="divisionsSection">
+
+                <div class="divisions-container" id="divisionsContainer">
+                </div>
             </div>
+        </div>
+
+        <!-- <div class="dropdown-title">
+            <i class="fas fa-list"></i>
+            BTS List
+        </div> -->
+
+        <div class="dropdown-list" id="btsList">
+            <!-- BTS items will be populated by JavaScript -->
+        </div>
         </div>
     </aside>
 
@@ -52,7 +68,7 @@
             <div class="navbar-right">
                 <div class="user-profile">
                     <div class="avatar">LT</div>
-                    <span>Link 3  Technology</span>
+                    <span>Link 3 Technology</span>
                 </div>
             </div>
         </nav>

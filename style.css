@@ -38,17 +38,21 @@ body {
   color: white;
   display: flex;
   flex-direction: column;
-  z-index: 100;
+  z-index: 1000;
   height: 100vh;
-  overflow-y: auto;
   position: fixed;
   left: 0;
   top: 0;
+  transition: transform 0.3s ease;
+  /* overflow: hidden; */
 }
 
 .sidebar-header {
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   padding: 0 10px;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
 }
 
 .logo {
@@ -59,16 +63,11 @@ body {
   font-size: 24px;
   display: flex;
   align-items: center;
-  height: 90px;
+  min-height: 90px;
   font-weight: 700;
   color: #3867d6;
-  position: sticky;
-  top: 0;
-  left: 0;
-  z-index: 100;
-  /* background:var(--primary); */
-  transition: all 0.3s ease;
   padding: 0 6px;
+  flex-shrink: 0;
 }
 
 .brand-img {
@@ -98,8 +97,8 @@ body {
 }
 
 .search-container {
-  margin-bottom: 25px;
-  margin-top: 25px;
+  margin: 15px 0;
+  flex-shrink: 0;
 }
 
 .search-container input {
@@ -125,10 +124,11 @@ body {
 
 .dropdown-title {
   font-size: 16px;
-  margin-bottom: 15px;
+  margin: 10px 0;
   font-weight: 500;
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .dropdown-title i {
@@ -137,51 +137,86 @@ body {
 }
 
 .dropdown-list {
-  max-height: calc(100vh - 250px);
+  max-height: 200px;
   overflow-y: auto;
-  padding-right: 5px;
+  margin-bottom: 10px;
+  flex-shrink: 0;
 }
 
-.dropdown-list::-webkit-scrollbar {
-  width: 5px;
+.divisions-container {
+  flex: 1;
+  overflow-y: auto;
+  min-height: 0;
 }
 
-.dropdown-list::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
-}
-
-.dropdown-item {
-  padding: 12px 15px;
-  margin-bottom: 8px;
-  border-radius: 8px;
+.bts-item {
+  padding: 10px 15px;
+  margin-bottom: 5px;
+  border-radius: 6px;
   cursor: pointer;
   transition: all 0.2s ease;
-  display: flex;
-  align-items: center;
+  display: block;
   text-decoration: none;
   color: white;
+  font-size: 14px;
+  border-left: 3px solid transparent;
+  background: rgba(255, 255, 255, 0.05);
 }
 
-.dropdown-item:hover {
-  background: rgba(255, 255, 255, 0.15);
+.bts-item:hover {
+  background: rgba(255, 255, 255, 0.1);
+  border-left: 3px solid var(--accent);
 }
 
-.dropdown-item.active {
-  background: rgba(255, 255, 255, 0.2);
+
+.division-dropdown {
+  margin-bottom: 5px;
+}
+
+.division-header {
+  padding: 12px 15px;
+  background: rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  cursor: pointer;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  transition: all 0.3s ease;
   font-weight: 500;
 }
 
-.dropdown-item i {
-  margin-right: 10px;
-  font-size: 14px;
+.division-header:hover {
+  background: rgba(255, 255, 255, 0.15);
+}
+
+.division-header i {
+  transition: transform 0.3s ease;
+  font-size: 12px;
+}
+
+.division-header.active i {
+  transform: rotate(180deg);
+}
+
+.division-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+  margin-top: 5px;
+  padding-left: 10px;
+}
+
+.division-content.show {
+  max-height: 300px;
+  overflow-y: auto;
 }
 
 .no-results {
-  padding: 20px;
+  padding: 15px;
   text-align: center;
   color: rgba(255, 255, 255, 0.7);
   font-style: italic;
+  font-size: 14px;
 }
 
 /* Navbar Styles */
@@ -368,42 +403,75 @@ body {
   color: #065f46;
 }
 
-/* Scrollbar Styling */
-.sidebar::-webkit-scrollbar {
-  width: 6px;
+/* All Sidebar Scrollbars  Start*/
+.sidebar::-webkit-scrollbar,
+.division-content::-webkit-scrollbar,
+.divisions-container::-webkit-scrollbar,
+.dropdown-list::-webkit-scrollbar {
+    width: 3px;
 }
 
-.sidebar::-webkit-scrollbar-track {
-  background: rgba(255, 255, 255, 0.1);
-  border-radius: 10px;
+.sidebar::-webkit-scrollbar-track,
+.division-content::-webkit-scrollbar-track,
+.divisions-container::-webkit-scrollbar-track,
+.dropdown-list::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
 }
 
-.sidebar::-webkit-scrollbar-thumb {
-  background: rgba(255, 255, 255, 0.3);
-  border-radius: 10px;
+.sidebar::-webkit-scrollbar-thumb,
+.division-content::-webkit-scrollbar-thumb,
+.divisions-container::-webkit-scrollbar-thumb,
+.dropdown-list::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+    border-radius: 3px;
 }
 
-.sidebar::-webkit-scrollbar-thumb:hover {
-  background: rgba(255, 255, 255, 0.5);
+.sidebar::-webkit-scrollbar-thumb:hover,
+.division-content::-webkit-scrollbar-thumb:hover,
+.divisions-container::-webkit-scrollbar-thumb:hover,
+.dropdown-list::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
 }
 
+/* Main Content Area Scrollbar */
+.content::-webkit-scrollbar {
+    width: 3px;
+}
+
+.content::-webkit-scrollbar-track {
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+    border-radius: 3px;
+}
+
+.content::-webkit-scrollbar-thumb:hover {
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
+}
+
+/* Card Content Scrollbars */
 .card-content::-webkit-scrollbar {
-  width: 6px;
+    width: 3px;
 }
 
 .card-content::-webkit-scrollbar-track {
-  background: #f1f1f1;
-  border-radius: 10px;
+    background: #2d3748;
+    border-radius: 3px;
 }
 
 .card-content::-webkit-scrollbar-thumb {
-  background: var(--primary-first);
-  border-radius: 15px;
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 0.8), rgba(255, 255, 255, 0.8));
+    border-radius: 3px;
 }
 
 .card-content::-webkit-scrollbar-thumb:hover {
-  background: var(--primary-dark);
+    background: linear-gradient(to bottom, rgba(0, 0, 0, 1), rgba(255, 255, 255, 1));
 }
+/* All Sidebar Scrollbars  End*/
 
 /* Responsive Styles */
 @media (max-width: 1200px) {
