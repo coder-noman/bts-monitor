@@ -1,54 +1,54 @@
 const bts = {
     "Dhaka North": {
-        "5": "Dhaka-Uttara-BTS-Bns Tower (L3)",
-        "7": "Dhaka-Mirpur-BTS-Mirpur-10 (L3)",
-        "35": "Dhaka-Uttara-BTS-Uttara office (L3)",
-        "31": "Dhaka-Banani-BTS-Ahmed Tower (L3)",
-        "33": "Dhaka-Banani-BTS-Banani Road 27 (L3)",
-        "59": "Dhaka-Gulshan-BTS-Gulshan-1 (L3)",
-        "85": "Dhaka-Gulshan-BTS-Gulshan-1 (L3)",
-        "62": "Dhaka-Rampura-BTS-Banasree (L3)",
-        "88": "Dhaka-Rampura-BTS-Banasree (L3)",
-        "42": "Dhaka-Uttara-BTS-Sector 13 (L3)",
-        "279": "Dhaka-Uttara-BTS-Sector 13 (L3)",
-        "146": "Tangail-Tangail Sadar-BTS-Korotia (GP)",
-        "206": "Dhaka-Banani-NTTN-Aggregation (FHL)",
-        "227": "Dhaka-Pallabi-BTS-Mirpur Dohs (L3)",
-        "229": "Dhaka-Bhatara-BTS-Basundhara_D (L3)",
-        "231": "Dhaka-Gulshan-BTS-BL Central (BL)",
-        "296": "Dhaka-Gulshan-DC-Mir Telecom (L3)",
-        "297": "Dhaka-Mohakhali-DR-Khaza Tower (L3)",
-        "313": "Dhaka-Khilkhet-BTS-Nikunja (L3)",
-        "326": "Tangail-Mirzapur-BTS-Warsi (GP)",
-        "358": "Tangail-Tangail-BTS-Khan Plaza (L3)",
-        "363": "Dhaka-Mirpur-BTS-East Shewrapara (L3)",
-        "379": "Dhaka-Tejgaon-BTS-Tejgaon (L3)",
-        "386": "Dhaka-Badda-BTS-Dit Project (L3)",
-        "387": "Dhaka-Rampura-BTS-Mohanagar Project (L3)",
-        "388": "Dhaka-Mirpur-BTS-Mirpur 2 (L3)",
-        "434": "Tangail-Bhuapur-BTS-Bhuapur (BL)",
-        "455": "Gazipur-Tongi (East)-BTS-Tongi (L3)",
-        "456": "Dhaka-Gulshan-BTS-Police Plaza (L3)",
-        "67": "Dhaka-Gulshan-BTS-Police Plaza (L3)",
-        "489": "Gazipur-Gazipur Sadar-BTS-Sumon Complex Shimultoli (L3)",
-        "497": "Dhaka-Uttara-BTS-Dakshinkhan (L3)",
-        "522": "Dhaka-Bhatara-BTS-Basundhara_I (L3)",
-        "547": "Dhaka-Gulshan-DC-Mir Telecom (L3)",
-        "571": "Dhaka-Khilkhet-BTS-Nikunja (L3)",
-        "659": "Dhaka-Tejgaon-NTTN-Aggregation (SCL)",
-        "667": "Gazipur-Kaliganj-BTS-Ulukhola (BL)",
-        "674": "Dhaka-Uttara-BTS-Uttara Sector 15 (SA)",
-        "693": "Dhaka-Vatara-BTS-Shahjadpur (L3)",
-        "704": "Gazipur-Salna-BTS-Salna (L3)",
-        "705": "Tangail-Shokhipur-BTS-Shokhipur (L3)",
-        "711": "Dhaka-Tejgaon-BTS-East Nakhalpara (L3)",
-        "727": "Dhaka-Uttara-BTS-Uttarkhan (GP)",
-        "735": "Dhaka-Gulshan-NTTN-Aggregation (Bahon)",
-        "13980": "Dhaka-Gulshan-NTTN-Aggregation (BTCL)",
-        "13989": "Dhaka-Tejgaon-BTS-Khawaja Tower Agg (GP)",
-        "24013": "Gazipur-Kaliakair-BTS-Felicity IDC (L3)",
-        "24067": "Gazipur-Konabari-BTS-Ambagh (SA)",
-        "24069": "Tangail-Sakhipur-BTS-Nalua (SA)"
+        "5": "Uttara-BTS-Bns Tower",
+        "10": "Mirpur-BTS-Mirpur-10",
+        "42": "Uttara-BTS-Uttara office",
+        "46": "Mawna-BTS-Mawna Chowrasta",
+        "52": "Banani-BTS-Ahmed Tower",
+        "54": "Banani-BTS-Banani Road 27",
+        "85": "Gulshan-BTS-Gulshan-1",
+        "88": "Rampura-BTS-Banasree",
+        "145": "Tangail-Sadar-BTS-Korotia",
+        "206": "Banani-NTTN-Aggregation(FHL)",
+        "227": "Dhaka-Pallabi-BTS-Mirpur Dohs",
+        "229": "Bhatara-BTS-Basundhara_D",
+        "231": "Gulshan-BTS-BL Central",
+        "279": "Uttara-BTS-Sector 13",
+        "326": "Mirzapur-BTS-Warsi",
+        "358": "Tangail-BTS-Khan Plaza",
+        "379": "Tejgaon-BTS-Tejgaon",
+        "386": "Badda-BTS-Dit Project",
+        "387": "Rampura-BTS-Mohanagar Project",
+        "388": "Mirpur-BTS-Mirpur 2",
+        "416": "Bimanbandar-COLO-Bimanbandar",
+        "434": "Bhuapur-BTS-Bhuapur",
+        "455": "Gazipur-Tongi (East)-BTS-Tongi",
+        "456": "Gulshan-BTS-Police Plaza",
+        "489": "Gazipur Sadar-BTS-Sumon Complex Shimultoli",
+        "497": "Uttara-BTS-Dakshinkhan",
+        "512": "Gazipur-Sadar-BTS-Gazipur-Office",
+        "522": "Bhatara-BTS-Basundhara_I",
+        "547": "Gulshan-DC-Mir Telecom",
+        "548": "Mohakhali-DR-Khaza Tower",
+        "571": "Khilkhet-BTS-Nikunja",
+        "659": "Tejgaon-NTTN-Aggregation(SCL)",
+        "667": "Kaliganj-BTS-Ulukhola",
+        "674": "Uttara-BTS-Uttara-Sector-15",
+        "684": "Gazipur-Gacha-BTS-Gacha",
+        "693": "Vatara-BTS-Shahjadpur",
+        "704": "Gazipur-Salna-BTS-Salna",
+        "705": "Tangail-Shokhipur-BTS-Shokhipur",
+        "706": "Mirpur-BTS-East-Shewrapara",
+        "711": "Tejgaon-BTS-East-Nakhalpara",
+        "715": "Gazipur-BTS-Nawjor",
+        "723": "Gazipur-BTS-Gazipur",
+        "727": "Uttara-BTS-Uttarkhan",
+        "735": "Gulshan-NTTN-Aggregation (Bahon)",
+        "13980": "Gulshan-NTTN-Aggregation (BTCL)",
+        "13989": "Tejgaon-BTS-Khawaja-Tower-Agg",
+        "24013": "Kaliakair-BTS-Felicity IDC",
+        "24067": "Konabari-BTS-Ambagh",
+        "24069": "Tangail-Sakhipur-BTS-Nalua"
     },
     "Dhaka South": {
         "4": "Dhaka-Dhanmondi-BTS-Dhanmondi Office (L3)",
@@ -570,7 +570,6 @@ const bts = {
         "24095": "Sunamganj-South Sunamganj-BTS-Mina Bazar (SA)"
     }
 };
-
 // DOM Elements
 const searchInput = document.getElementById('btsSearchInput');
 const searchResults = document.getElementById('searchResults');
@@ -581,7 +580,7 @@ const divisionsContainer = document.getElementById('divisionsContainer');
 function createBTSItem(btsCode, btsName, division) {
     const item = document.createElement('a');
     item.className = 'bts-item';
-    item.href = `dashboard/dashboard.html?location = ${btsName}`;
+    item.href = `dashboard/dashboard.html?location=${btsName}&id=${btsCode}`;
     item.textContent = btsName;
     item.title = `${btsName} (Code: ${btsCode})`;
 
@@ -664,7 +663,7 @@ function createDivisionDropdown(divisionName, btsList) {
     header.addEventListener('click', function () {
         const isActive = header.classList.contains('active');
 
-        // Close all other dropdowns
+        // Close all other dropdown
         document.querySelectorAll('.division-header.active').forEach(otherHeader => {
             if (otherHeader !== header) {
                 otherHeader.classList.remove('active');
@@ -815,103 +814,122 @@ generateTables();
 
 // Data sets for each table
 tableDataSets = {
-    "BTS Down List": [
-        { btsName: "Dhaka-Uttara-BTS-Bns Tower (L3)", zone: "Dhaka North", unit: "2h 15m" },
-        { btsName: "Dhaka-Mirpur-BTS-Mirpur-10 (L3)", zone: "Dhaka North", unit: "45m" },
-        { btsName: "Dhaka-Kalabagan-BTS-Concord (L3)", zone: "Dhaka South", unit: "2h 15m" },
-        { btsName: "Chattogram-Bandar-BTS-Ali Plaza (L3)", zone: "Chattogram", unit: "45m" },
-        { btsName: "Khulna-Khulna-BTS-Kda Avenue (L3)", zone: "Khulna", unit: "2h 15m" },
-        { btsName: "Rajshahi-Boalia-BTS-Atm Bhaban (L3)", zone: "Rajshahi", unit: "45m" },
-        { btsName: "Sylhet-Sylhet-BTS-Uposhahar (L3)", zone: "Sylhet", unit: "2h 15m" },
-        { btsName: "Mymensingh-Mymensingh-BTS-Ck Goss Road (L3)", zone: "Mymensingh", unit: "45m" }
-    ],
-    "UPS1 Fail List": [
-        { btsName: "Dhaka-Motijheel-BTS-Malek Mension (L3)", zone: "Dhaka South", unit: "3h 20m" },
-        { btsName: "Dhaka-Motijheel-BTS-Dilkusha (L3)", zone: "Dhaka South", unit: "1h 10m" },
-        { btsName: "Dhaka-Chokbazar-BTS-Imamgonj (L3)", zone: "Dhaka South", unit: "45m" }
-    ],
-    "UPS2 Fail List": [
-        { btsName: "Narayanganj-Chashara-BTS-Haque Plaza (L3)", zone: "Dhaka South", unit: "2h 5m" },
-        { btsName: "Narayanganj-Siddhirganj-BTS-Ctg Road (L3)", zone: "Dhaka South", unit: "50m" }
-    ],
-    "PDB Down List": [
-        { btsName: "Dhaka-Dohar-BTS-Joypara (L3)", zone: "Dhaka South", unit: "4h 15m" },
-        { btsName: "Narsingdi-Palash-BTS-Ghorashal (L3)", zone: "Mymensingh", unit: "2h 30m" },
-        { btsName: "Narsingdi-Narsingdi-BTS-Madhobdi (L3)", zone: "Mymensingh", unit: "1h 45m" }
-    ],
-    "High Temperature List": [
-        { btsName: "Brahmanbaria-Brahmanbaria-BTS-Mizan Tower (L3)", zone: "Mymensingh", unit: "3h 20m" },
-        { btsName: "Kishoreganj-Kishoreganj Sadar-BTS-Kishoregonj (L3)", zone: "Mymensingh", unit: "2h 10m" },
-        { btsName: "Kishoreganj-Bhairab-BTS-Mizan Tower (L3)", zone: "Mymensingh", unit: "1h 5m" }
-    ],
-    "PDB High Voltage List": [
-        { btsName: "Dhaka-Tejgaon-BTS-Monipuripara (L3)", zone: "Dhaka South", unit: "6h 15m" },
-        { btsName: "Dhaka-Khilkhet-BTS-Nikunja (L3)", zone: "Dhaka North", unit: "4h 30m" }
-    ],
-    "PDB Low Voltage List": [
-        { btsName: "Dhaka-Ramna-BTS-Easkaton (L3)", zone: "Dhaka South", unit: "5h 20m" },
-        { btsName: "Dhaka-Rampura-BTS-Banasree (L3)", zone: "Dhaka North", unit: "3h 45m" },
-        { btsName: "Gazipur-Mawna-BTS-Mawna Chowrasta (L3)", zone: "Dhaka North", unit: "2h 10m" }
-    ],
-    "Battery Low List 48v": [
-        { btsName: "Dhaka-Kalabagan-BTS-Hatirpool (L3)", zone: "Dhaka South", unit: "8h 15m" },
-        { btsName: "Dhaka-Mohammadpur-BTS-Probal Housing (L3)", zone: "Dhaka South", unit: "6h 30m" },
-        { btsName: "Dhaka-Mirpur DOHS-Support Office", zone: "Dhaka North", unit: "4h 45m" }
-    ],
-    "Battery Low List 12v": [
-        { btsName: "Dhaka-Bhatara-BTS-Basundhara_D (L3)", zone: "Dhaka North", unit: "7h 20m" },
-        { btsName: "Dhaka-Bhatara-BTS-Basundhara_I (L3)", zone: "Dhaka North", unit: "5h 35m" },
-        { btsName: "Dhaka-Wari-BTS-B.C.C Road (L3)", zone: "Dhaka South", unit: "3h 50m" }
-    ],
-    "Door Open": [
-        { btsName: "Dhaka-Uttara-BTS-Sector 13 (L3)", zone: "Dhaka North", unit: "2h 15m" },
-        { btsName: "Manikganj-Manikgonj-BTS-Manikgonj (L3)", zone: "Dhaka South", unit: "1h 30m" }
-    ],
-    "Human Presence": [
-        { btsName: "Dhaka-Mirpur-BTS-Mirpur 2 (L3)", zone: "Dhaka North", unit: "45m" },
-        { btsName: "Munshiganj-Munshiganj-BTS-Jublee Road (L3)", zone: "Dhaka South", unit: "30m" },
-        { btsName: "Dhaka-Ashulia-BTS-Jamgora (L3)", zone: "Dhaka South", unit: "15m" }
-    ],
-    "Water Leakage": [
-        { btsName: "Gazipur-Tongi (East)-BTS-Tongi (L3)", zone: "Dhaka North", unit: "3h 20m" },
-        { btsName: "Dhaka-Mohammadpur-BTS-Lalmatia (L3)", zone: "Dhaka South", unit: "2h 45m" }
-    ],
-    "Generator": [
-        { btsName: "Dhaka-Sher-E Bangla Nagar-BTS-Agargaon (L3)", zone: "Dhaka South", unit: "6h 15m" },
-        { btsName: "Cumilla-Cumilla Sadar-BTS-Sattar Khan Complex (L3)", zone: "Chattogram", unit: "4h 30m" },
-        { btsName: "Chandpur-Chandpur-BTS-Sardar Plaza (L3)", zone: "Chattogram", unit: "2h 45m" }
-    ],
-    "UPS1 CB Tripped": [
-        { btsName: "Gazipur-Gazipur Sadar-BTS-Sumon Complex Shimultoli (L3)", zone: "Dhaka North", unit: "5h 20m" },
-        { btsName: "Brahmanbaria-Akhaura-BTS-Akhaura (L3)", zone: "Mymensingh", unit: "3h 35m" }
-    ],
-    "UPS2 CB Tripped": [
-        { btsName: "Brahmanbaria-Ashuganj-BTS-Ashuganj (L3)", zone: "Mymensingh", unit: "4h 15m" },
-        { btsName: "Dhaka-Uttara-BTS-Dakshinkhan (L3)", zone: "Dhaka North", unit: "2h 30m" }
-    ],
-    "Main CB Tripped": [
-        { btsName: "Mymensingh-Haluaghat-BTS-Haluaghat (BL)", zone: "Mymensingh", unit: "7h 20m" },
-        { btsName: "Cumilla-Chauddagram-BTS-Chauddagram (L3)", zone: "Chattogram", unit: "5h 45m" },
-        { btsName: "Dhaka-Mirpur-BTS-East Shewrapara (L3)", zone: "Dhaka North", unit: "3h 10m" }
-    ],
-    "LAN Communication Fail": [
-        { btsName: "Mymensingh-Trishal-BTS-Trishal (L3)", zone: "Mymensingh", unit: "6h 15m" },
-        { btsName: "Dhaka-Vatara-BTS-Shahjadpur (L3)", zone: "Dhaka North", unit: "4h 30m" }
-    ],
-    "All Communication Fail": [
-        { btsName: "Gazipur-Salna-BTS-Salna (L3)", zone: "Dhaka North", unit: "8h 20m" },
-        { btsName: "Tangail-Shokhipur-BTS-Shokhipur (L3)", zone: "Dhaka North", unit: "6h 35m" },
-        { btsName: "Dhaka-Dhamrai-BTS-Uttar Para Dhamrai (L3)", zone: "Dhaka South", unit: "4h 50m" }
-    ],
-    "Poor Network List": [
-        { btsName: "Mymensingh-Phulpur-BTS-Phulpur (SA)", zone: "Mymensingh", unit: "9h 15m" },
-        { btsName: "Dhaka-Shahjahanpur-BTS-Shahjahanpur (L3)", zone: "Dhaka South", unit: "7h 30m" }
-    ],
-    "Grounding Fail List": [
-        { btsName: "Mymensingh-Gafargaon-BTS-Gafargaon (L3)", zone: "Mymensingh", unit: "10h 20m" },
-        { btsName: "Gazipur-Gazipur-BTS-Nawjor (L3)", zone: "Dhaka North", unit: "8h 45m" },
-        { btsName: "Dhaka-Tejgaon-BTS-East Nakhalpara (L3)", zone: "Dhaka North", unit: "6h 10m" }
-    ]
+  "BTS Down List": [
+    { btsCode: "BTS001", btsName: "Dhaka-Uttara-BTS-Bns Tower (L3)", zone: "Dhaka North", unit: "2h 15m" },
+    { btsCode: "BTS002", btsName: "Dhaka-Mirpur-BTS-Mirpur-10 (L3)", zone: "Dhaka North", unit: "45m" },
+    { btsCode: "BTS003", btsName: "Dhaka-Kalabagan-BTS-Concord (L3)", zone: "Dhaka South", unit: "2h 15m" },
+    { btsCode: "BTS004", btsName: "Chattogram-Bandar-BTS-Ali Plaza (L3)", zone: "Chattogram", unit: "45m" },
+    { btsCode: "BTS005", btsName: "Khulna-Khulna-BTS-Kda Avenue (L3)", zone: "Khulna", unit: "2h 15m" },
+    { btsCode: "BTS006", btsName: "Rajshahi-Boalia-BTS-Atm Bhaban (L3)", zone: "Rajshahi", unit: "45m" },
+    { btsCode: "BTS007", btsName: "Sylhet-Sylhet-BTS-Uposhahar (L3)", zone: "Sylhet", unit: "2h 15m" },
+    { btsCode: "BTS008", btsName: "Mymensingh-Mymensingh-BTS-Ck Goss Road (L3)", zone: "Mymensingh", unit: "45m" }
+  ],
+
+  "UPS1 Fail List": [
+    { btsCode: "BTS009", btsName: "Dhaka-Motijheel-BTS-Malek Mension (L3)", zone: "Dhaka South", unit: "3h 20m" },
+    { btsCode: "BTS010", btsName: "Dhaka-Motijheel-BTS-Dilkusha (L3)", zone: "Dhaka South", unit: "1h 10m" },
+    { btsCode: "BTS011", btsName: "Dhaka-Chokbazar-BTS-Imamgonj (L3)", zone: "Dhaka South", unit: "45m" }
+  ],
+
+  "UPS2 Fail List": [
+    { btsCode: "BTS012", btsName: "Narayanganj-Chashara-BTS-Haque Plaza (L3)", zone: "Dhaka South", unit: "2h 5m" },
+    { btsCode: "BTS013", btsName: "Narayanganj-Siddhirganj-BTS-Ctg Road (L3)", zone: "Dhaka South", unit: "50m" }
+  ],
+
+  "PDB Down List": [
+    { btsCode: "BTS014", btsName: "Dhaka-Dohar-BTS-Joypara (L3)", zone: "Dhaka South", unit: "4h 15m" },
+    { btsCode: "BTS015", btsName: "Narsingdi-Palash-BTS-Ghorashal (L3)", zone: "Mymensingh", unit: "2h 30m" },
+    { btsCode: "BTS016", btsName: "Narsingdi-Narsingdi-BTS-Madhobdi (L3)", zone: "Mymensingh", unit: "1h 45m" }
+  ],
+
+  "High Temperature List": [
+    { btsCode: "BTS017", btsName: "Brahmanbaria-Brahmanbaria-BTS-Mizan Tower (L3)", zone: "Mymensingh", unit: "3h 20m" },
+    { btsCode: "BTS018", btsName: "Kishoreganj-Kishoreganj Sadar-BTS-Kishoregonj (L3)", zone: "Mymensingh", unit: "2h 10m" },
+    { btsCode: "BTS019", btsName: "Kishoreganj-Bhairab-BTS-Mizan Tower (L3)", zone: "Mymensingh", unit: "1h 5m" }
+  ],
+
+  "PDB High Voltage List": [
+    { btsCode: "BTS020", btsName: "Dhaka-Tejgaon-BTS-Monipuripara (L3)", zone: "Dhaka South", unit: "6h 15m" },
+    { btsCode: "BTS021", btsName: "Dhaka-Khilkhet-BTS-Nikunja (L3)", zone: "Dhaka North", unit: "4h 30m" }
+  ],
+
+  "PDB Low Voltage List": [
+    { btsCode: "BTS022", btsName: "Dhaka-Ramna-BTS-Easkaton (L3)", zone: "Dhaka South", unit: "5h 20m" },
+    { btsCode: "BTS023", btsName: "Dhaka-Rampura-BTS-Banasree (L3)", zone: "Dhaka North", unit: "3h 45m" },
+    { btsCode: "BTS024", btsName: "Gazipur-Mawna-BTS-Mawna Chowrasta (L3)", zone: "Dhaka North", unit: "2h 10m" }
+  ],
+
+  "Battery Low List 48v": [
+    { btsCode: "BTS025", btsName: "Dhaka-Kalabagan-BTS-Hatirpool (L3)", zone: "Dhaka South", unit: "8h 15m" },
+    { btsCode: "BTS026", btsName: "Dhaka-Mohammadpur-BTS-Probal Housing (L3)", zone: "Dhaka South", unit: "6h 30m" },
+    { btsCode: "BTS027", btsName: "Dhaka-Mirpur DOHS-Support Office", zone: "Dhaka North", unit: "4h 45m" }
+  ],
+
+  "Battery Low List 12v": [
+    { btsCode: "BTS028", btsName: "Dhaka-Bhatara-BTS-Basundhara_D (L3)", zone: "Dhaka North", unit: "7h 20m" },
+    { btsCode: "BTS029", btsName: "Dhaka-Bhatara-BTS-Basundhara_I (L3)", zone: "Dhaka North", unit: "5h 35m" },
+    { btsCode: "BTS030", btsName: "Dhaka-Wari-BTS-B.C.C Road (L3)", zone: "Dhaka South", unit: "3h 50m" }
+  ],
+
+  "Door Open": [
+    { btsCode: "BTS031", btsName: "Dhaka-Uttara-BTS-Sector 13 (L3)", zone: "Dhaka North", unit: "2h 15m" },
+    { btsCode: "BTS032", btsName: "Manikganj-Manikgonj-BTS-Manikgonj (L3)", zone: "Dhaka South", unit: "1h 30m" }
+  ],
+
+  "Human Presence": [
+    { btsCode: "BTS033", btsName: "Dhaka-Mirpur-BTS-Mirpur 2 (L3)", zone: "Dhaka North", unit: "45m" },
+    { btsCode: "BTS034", btsName: "Munshiganj-Munshiganj-BTS-Jublee Road (L3)", zone: "Dhaka South", unit: "30m" },
+    { btsCode: "BTS035", btsName: "Dhaka-Ashulia-BTS-Jamgora (L3)", zone: "Dhaka South", unit: "15m" }
+  ],
+
+  "Water Leakage": [
+    { btsCode: "BTS036", btsName: "Gazipur-Tongi (East)-BTS-Tongi (L3)", zone: "Dhaka North", unit: "3h 20m" },
+    { btsCode: "BTS037", btsName: "Dhaka-Mohammadpur-BTS-Lalmatia (L3)", zone: "Dhaka South", unit: "2h 45m" }
+  ],
+
+  "Generator": [
+    { btsCode: "BTS038", btsName: "Dhaka-Sher-E Bangla Nagar-BTS-Agargaon (L3)", zone: "Dhaka South", unit: "6h 15m" },
+    { btsCode: "BTS039", btsName: "Cumilla-Cumilla Sadar-BTS-Sattar Khan Complex (L3)", zone: "Chattogram", unit: "4h 30m" },
+    { btsCode: "BTS040", btsName: "Chandpur-Chandpur-BTS-Sardar Plaza (L3)", zone: "Chattogram", unit: "2h 45m" }
+  ],
+
+  "UPS1 CB Tripped": [
+    { btsCode: "BTS041", btsName: "Gazipur-Gazipur Sadar-BTS-Sumon Complex Shimultoli (L3)", zone: "Dhaka North", unit: "5h 20m" },
+    { btsCode: "BTS042", btsName: "Brahmanbaria-Akhaura-BTS-Akhaura (L3)", zone: "Mymensingh", unit: "3h 35m" }
+  ],
+
+  "UPS2 CB Tripped": [
+    { btsCode: "BTS043", btsName: "Brahmanbaria-Ashuganj-BTS-Ashuganj (L3)", zone: "Mymensingh", unit: "4h 15m" },
+    { btsCode: "BTS044", btsName: "Dhaka-Uttara-BTS-Dakshinkhan (L3)", zone: "Dhaka North", unit: "2h 30m" }
+  ],
+
+  "Main CB Tripped": [
+    { btsCode: "BTS045", btsName: "Mymensingh-Haluaghat-BTS-Haluaghat (BL)", zone: "Mymensingh", unit: "7h 20m" },
+    { btsCode: "BTS046", btsName: "Cumilla-Chauddagram-BTS-Chauddagram (L3)", zone: "Chattogram", unit: "5h 45m" },
+    { btsCode: "BTS047", btsName: "Dhaka-Mirpur-BTS-East Shewrapara (L3)", zone: "Dhaka North", unit: "3h 10m" }
+  ],
+
+  "LAN Communication Fail": [
+    { btsCode: "BTS048", btsName: "Mymensingh-Trishal-BTS-Trishal (L3)", zone: "Mymensingh", unit: "6h 15m" },
+    { btsCode: "BTS049", btsName: "Dhaka-Vatara-BTS-Shahjadpur (L3)", zone: "Dhaka North", unit: "4h 30m" }
+  ],
+
+  "All Communication Fail": [
+    { btsCode: "BTS050", btsName: "Gazipur-Salna-BTS-Salna (L3)", zone: "Dhaka North", unit: "8h 20m" },
+    { btsCode: "BTS051", btsName: "Tangail-Shokhipur-BTS-Shokhipur (L3)", zone: "Dhaka North", unit: "6h 35m" },
+    { btsCode: "BTS052", btsName: "Dhaka-Dhamrai-BTS-Uttar Para Dhamrai (L3)", zone: "Dhaka South", unit: "4h 50m" }
+  ],
+
+  "Poor Network List": [
+    { btsCode: "BTS053", btsName: "Mymensingh-Phulpur-BTS-Phulpur (SA)", zone: "Mymensingh", unit: "9h 15m" },
+    { btsCode: "BTS054", btsName: "Dhaka-Shahjahanpur-BTS-Shahjahanpur (L3)", zone: "Dhaka South", unit: "7h 30m" }
+  ],
+
+  "Grounding Fail List": [
+    { btsCode: "BTS055", btsName: "Mymensingh-Gafargaon-BTS-Gafargaon (L3)", zone: "Mymensingh", unit: "10h 20m" },
+    { btsCode: "BTS056", btsName: "Gazipur-Gazipur-BTS-Nawjor (L3)", zone: "Dhaka North", unit: "8h 45m" },
+    { btsCode: "BTS057", btsName: "Dhaka-Tejgaon-BTS-East Nakhalpara (L3)", zone: "Dhaka North", unit: "6h 10m" }
+  ]
 };
 
 // Function to make tableDataSets object empty
@@ -933,6 +951,7 @@ function updateTable(tableName, data) {
 
     const tbody = table.querySelector('tbody');
     tbody.innerHTML = '';
+    console.log(data.length);
 
     data.forEach(item => {
         const row = document.createElement('tr');
@@ -943,7 +962,7 @@ function updateTable(tableName, data) {
             .map(word => word.charAt(0).toUpperCase() + word.slice(1))
             .join(" ");
         row.innerHTML = `
-        <td><a class="table-bts-name" href="dashboard/dashboard.html?location=${item.btsName}">${formattedName}</a></td>
+        <td><a class="table-bts-name" href="dashboard/dashboard.html?location=${item.btsName}&id=${item.btsCode}">${formattedName}</a></td>
             <td>${item.zone}</td>
             <td>${item.unit}</td>
     `;

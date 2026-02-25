@@ -3,6 +3,12 @@ function getLocationFromURL() {
     const urlParams = new URLSearchParams(window.location.search);
     return urlParams.get('location') || 'banasree';
 }
+// const params = new URLSearchParams(window.location.search);
+
+// const btsName = params.get("location");
+// const btsId = params.get("id");
+
+// console.log(btsName, btsId);
 
 // Update page title with location
 function updatePageTitle(locationName) {
