@@ -22,6 +22,7 @@ function updatePageTitle(locationName) {
     titleElement.textContent = `Dashboard: ${formattedName}`;
     document.title = `AdminSite - ${formattedName}`;
 }
+// Gulshan1:230,220,240,300,22,20,23,50,37,58,40,45,42,61,280,248,250,278,243,1,0,0,1,1,0,1,1,0,1,0,1,1,172.24.19.122,NUL,0,4.23,1,1,0
 
 let barChart;
 let loadDataArr = [0, 0, 0, 0, 0];
@@ -50,7 +51,8 @@ function initializeWebSocket() {
         const msg = data[1] || "";
 
         // current location
-        if (data_category.toLowerCase() == currentLocation.toLowerCase()) {
+        if (data_category.toLowerCase() == "Gulshan1".toLowerCase()) {
+        // if (data_category.toLowerCase() == currentLocation.toLowerCase()) {
             updateLastSyncTime();
 
             console.log(`Data for ${currentLocation}:`, msg);
