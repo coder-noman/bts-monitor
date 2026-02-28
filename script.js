@@ -15,7 +15,7 @@ function logout() {
     window.location.href = 'registration.html';
 }
 
-// Add logout button event listener when DOM is loaded
+// Add all event listeners when DOM is loaded
 document.addEventListener('DOMContentLoaded', function() {
     const logoutBtn = document.getElementById('logoutBtn');
     if (logoutBtn) {
@@ -24,11 +24,39 @@ document.addEventListener('DOMContentLoaded', function() {
     
     // Menu toggle functionality
     const menuToggle = document.getElementById('menuToggle');
+    const sidebar = document.querySelector('.sidebar');
+    const overlay = document.getElementById('sidebarOverlay');
+    
     if (menuToggle) {
-        menuToggle.addEventListener('click', function () {
-            document.querySelector('.sidebar').classList.toggle('active');
+        menuToggle.addEventListener('click', function (e) {
+            e.stopPropagation();
+            sidebar.classList.toggle('active');
         });
     }
+    
+    // Close sidebar when clicking outside on mobile
+    document.addEventListener('click', function(event) {
+        const isMobile = window.innerWidth <= 1024;
+        
+        if (isMobile && sidebar.classList.contains('active')) {
+            // Check if click is outside sidebar and not on menu toggle
+            if (!sidebar.contains(event.target) && !menuToggle.contains(event.target)) {
+                sidebar.classList.remove('active');
+            }
+        }
+    });
+    
+    // Close sidebar when window resizes to desktop size
+    window.addEventListener('resize', function() {
+        if (window.innerWidth > 1024) {
+            sidebar.classList.remove('active');
+        }
+    });
+    
+    // Prevent clicks inside sidebar from closing it
+    sidebar.addEventListener('click', function(e) {
+        e.stopPropagation();
+    });
 });
 
 const bts = {
