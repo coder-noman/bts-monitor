@@ -876,23 +876,23 @@ generateTables();
 // Data sets for each table
 tableDataSets = { 
   "BTS Down List": [
-    { btsCode: "BTS001", btsName: "Kaliakair-BTS-Felicity IDC", zone: "Dhaka North", unit: "2h 15m" },
-    { btsCode: "BTS002", btsName: "Uttara-BTS-Uttara office", zone: "Dhaka North", unit: "45m" },
-    { btsCode: "BTS003", btsName: "Mirpur-BTS-East-Shewrapara", zone: "Dhaka North", unit: "6h 20m" },
-    { btsCode: "BTS004", btsName: "Gulshan-BTS-Police Plaza", zone: "Dhaka North", unit: "1h 55m" }
+    // { btsCode: "BTS001", btsName: "Kaliakair-BTS-Felicity IDC", zone: "Dhaka North", unit: "2h 15m" },
+    // { btsCode: "BTS002", btsName: "Uttara-BTS-Uttara office", zone: "Dhaka North", unit: "45m" },
+    // { btsCode: "BTS003", btsName: "Mirpur-BTS-East-Shewrapara", zone: "Dhaka North", unit: "6h 20m" },
+    // { btsCode: "BTS004", btsName: "Gulshan-BTS-Police Plaza", zone: "Dhaka North", unit: "1h 55m" }
   ],
 
   "UPS1 Fail List": [
-    { btsCode: "BTS010", btsName: "Tejgaon-BTS-East-Nakhalpara", zone: "Dhaka North", unit: "1h 40m" },
-    { btsCode: "BTS011", btsName: "Uttara-BTS-Uttarkhan", zone: "Dhaka North", unit: "3h 05m" },
-    { btsCode: "BTS013", btsName: "Bhatara-BTS-Basundhara_I", zone: "Dhaka North", unit: "55m" }
+    // { btsCode: "BTS010", btsName: "Tejgaon-BTS-East-Nakhalpara", zone: "Dhaka North", unit: "1h 40m" },
+    // { btsCode: "BTS011", btsName: "Uttara-BTS-Uttarkhan", zone: "Dhaka North", unit: "3h 05m" },
+    // { btsCode: "BTS013", btsName: "Bhatara-BTS-Basundhara_I", zone: "Dhaka North", unit: "55m" }
   ],
 
   "UPS2 Fail List": [
-    { btsCode: "BTS014", btsName: "Banani-BTS-Ahmed Tower", zone: "Dhaka North", unit: "2h 30m" },
-    { btsCode: "BTS015", btsName: "Tangail-Sadar-BTS-Korotia", zone: "Dhaka North", unit: "1h 25m" },
-    { btsCode: "BTS016", btsName: "Bimanbandar-COLO-Bimanbandar", zone: "Dhaka North", unit: "40m" },
-    { btsCode: "BTS017", btsName: "Rampura-BTS-Mohanagar Project", zone: "Dhaka North", unit: "3h 50m" }
+    // { btsCode: "BTS014", btsName: "Banani-BTS-Ahmed Tower", zone: "Dhaka North", unit: "2h 30m" },
+    // { btsCode: "BTS015", btsName: "Tangail-Sadar-BTS-Korotia", zone: "Dhaka North", unit: "1h 25m" },
+    // { btsCode: "BTS016", btsName: "Bimanbandar-COLO-Bimanbandar", zone: "Dhaka North", unit: "40m" },
+    // { btsCode: "BTS017", btsName: "Rampura-BTS-Mohanagar Project", zone: "Dhaka North", unit: "3h 50m" }
   ],
 
   "PDB Down List": [

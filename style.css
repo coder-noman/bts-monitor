@@ -247,7 +247,7 @@ body {
 
 /* Logout Button Styles */
 .logout-btn {
-  background: linear-gradient(145deg, #dc2626, #b91c1c);
+  background: linear-gradient(145deg, #f80808d0, #e02434);
   border: none;
   color: white;
   padding: 8px 16px;
@@ -264,8 +264,6 @@ body {
 
 .logout-btn:hover {
   background: linear-gradient(145deg, #b91c1c, #991b1b);
-  transform: translateY(-2px);
-  box-shadow: 0 4px 12px rgba(220, 38, 38, 0.3);
 }
 
 .logout-btn i {
@@ -280,14 +278,14 @@ body {
 .navbar-center h1 {
   font-size: 1.5rem;
   font-weight: 700;
-  color: var(--card-bg);
+  color: var(--green);
 }
 
 .navbar-right {
   display: flex;
   align-items: center;
   gap: 1.5rem;
-  color: var(--card-bg);
+  color: var(--blue);
 }
 
 .user-profile {
@@ -295,16 +293,20 @@ body {
   align-items: center;
   gap: 0.75rem;
 }
+.user-profile h1{
+  color: var(--green);
+}
+
 
 .avatar {
   width: 40px;
   height: 40px;
   border-radius: 50%;
-  background-color: white;
+  background-color: var(--blue);
   display: flex;
   align-items: center;
   justify-content: center;
-  color: black;
+  color: white;
   font-weight: bold;
 }
 

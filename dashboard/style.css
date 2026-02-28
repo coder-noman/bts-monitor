@@ -638,12 +638,6 @@ main h1 {
 /* Advance Alarm end */
 
 /* circuit Breaker start */
-.cb-container {
-  border-radius: 10px;
-  padding: 20px;
-  margin-bottom: 30px;
-}
-
 .cb-heading {
   font-size: 20px;
   margin-bottom: 15px;
@@ -656,7 +650,7 @@ main h1 {
 .cb-row {
   display: flex;
   justify-content: space-between;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
   flex-wrap: wrap;
 }
 
@@ -686,7 +680,6 @@ main h1 {
   background-color: #80808017;
   border-radius: 5px;
   overflow: hidden;
-  /* border: 1px solid gray; */
 }
 
 .cb-switch {
