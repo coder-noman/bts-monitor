@@ -815,10 +815,10 @@ socket.onmessage = (event) => {
 
 // Table configuration
 const tableConfig = [
+    { name: "PDB Down List", icon: "fa-server", bts_name: "BTS Name", zone: "Zone", unit: "Time" },
     { name: "BTS Down List", icon: "fa-bolt", bts_name: "BTS Name", zone: "Zone", unit: "Time" },
     { name: "UPS1 Fail List", icon: "fa-plug", bts_name: "BTS Name", zone: "Zone", unit: "Time" },
     { name: "UPS2 Fail List", icon: "fa-plug", bts_name: "BTS Name", zone: "Zone", unit: "Time" },
-    { name: "PDB Down List", icon: "fa-server", bts_name: "BTS Name", zone: "Zone", unit: "Time" },
     { name: "High Temperature List", icon: "fa-temperature-high", bts_name: "BTS Name", zone: "Zone", unit: "Temperature" },
     { name: "PDB High Voltage List", icon: "fa-bolt", bts_name: "BTS Name", zone: "Zone", unit: "Voltage" },
     { name: "PDB Low Voltage List", icon: "fa-bolt", bts_name: "BTS Name", zone: "Zone", unit: "Voltage" },
@@ -837,44 +837,14 @@ const tableConfig = [
     { name: "Grounding Fail List", icon: "fa-bolt", bts_name: "BTS Name", zone: "Zone", unit: "Voltage" }
 ];
 
-
-// Generate tables
-function generateTables() {
-    const container = document.getElementById('tableContainer');
-    container.innerHTML = '';
-
-    tableConfig.forEach(config => {
-        const card = document.createElement('div');
-        card.className = 'card';
-        card.innerHTML = `
-        <div class="card-header">
-                <span>${config.name}</span>
-                <i class="fas ${config.icon}"></i>
-            </div>
-        <div class="card-content">
-            <table class="table" id="${config.name.replace(/\s+/g, '-')}">
-                <thead>
-                    <tr>
-                        <th>${config.bts_name}</th>
-                        <th>${config.zone}</th>
-                        <th>${config.unit}</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <!-- Table data will be populated by WebSocket -->
-                </tbody>
-            </table>
-        </div>
-    `;
-        container.appendChild(card);
-    });
-}
-
-// Generate initial tables
-generateTables();
-
 // Data sets for each table
 tableDataSets = { 
+  "PDB Down List": [
+    { btsCode: "BTS020", btsName: "Uttara-BTS-Dakshinkhan", zone: "Dhaka North", unit: "4h 10m" },
+    { btsCode: "BTS021", btsName: "Gulshan-BTS-BL Central", zone: "Dhaka North", unit: "1h 50m" },
+    { btsCode: "BTS022", btsName: "Vatara-BTS-Shahjadpur", zone: "Dhaka North", unit: "2h 35m" },
+    { btsCode: "BTS023", btsName: "Mirzapur-BTS-Warsi", zone: "Dhaka North", unit: "5h 05m" }
+  ],
   "BTS Down List": [
     // { btsCode: "BTS001", btsName: "Kaliakair-BTS-Felicity IDC", zone: "Dhaka North", unit: "2h 15m" },
     // { btsCode: "BTS002", btsName: "Uttara-BTS-Uttara office", zone: "Dhaka North", unit: "45m" },
@@ -893,13 +863,6 @@ tableDataSets = {
     // { btsCode: "BTS015", btsName: "Tangail-Sadar-BTS-Korotia", zone: "Dhaka North", unit: "1h 25m" },
     // { btsCode: "BTS016", btsName: "Bimanbandar-COLO-Bimanbandar", zone: "Dhaka North", unit: "40m" },
     // { btsCode: "BTS017", btsName: "Rampura-BTS-Mohanagar Project", zone: "Dhaka North", unit: "3h 50m" }
-  ],
-
-  "PDB Down List": [
-    { btsCode: "BTS020", btsName: "Uttara-BTS-Dakshinkhan", zone: "Dhaka North", unit: "4h 10m" },
-    { btsCode: "BTS021", btsName: "Gulshan-BTS-BL Central", zone: "Dhaka North", unit: "1h 50m" },
-    { btsCode: "BTS022", btsName: "Vatara-BTS-Shahjadpur", zone: "Dhaka North", unit: "2h 35m" },
-    { btsCode: "BTS023", btsName: "Mirzapur-BTS-Warsi", zone: "Dhaka North", unit: "5h 05m" }
   ],
 
   "High Temperature List": [
@@ -1005,6 +968,42 @@ tableDataSets = {
     { btsCode: "BTS123", btsName: "Mirpur-BTS-Mirpur 2", zone: "Dhaka North", unit: "4.4 V" }
   ]
 };
+
+// Generate tables
+function generateTables() {
+    const container = document.getElementById('tableContainer');
+    container.innerHTML = '';
+
+    tableConfig.forEach(config => {
+        const card = document.createElement('div');
+        card.className = 'card';
+        card.innerHTML = `
+        <div class="card-header">
+                <span>${config.name}</span>
+                <i class="fas ${config.icon}"></i>
+            </div>
+        <div class="card-content">
+            <table class="table" id="${config.name.replace(/\s+/g, '-')}">
+                <thead>
+                    <tr>
+                        <th>${config.bts_name}</th>
+                        <th>${config.zone}</th>
+                        <th>${config.unit}</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Table data will be populated by WebSocket -->
+                </tbody>
+            </table>
+        </div>
+    `;
+        container.appendChild(card);
+    });
+}
+
+// Generate initial tables
+generateTables();
+
 // Function to make tableDataSets object empty
 function clearAllTableData() {
     Object.keys(tableDataSets).forEach(tableName => {
