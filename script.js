@@ -1016,6 +1016,21 @@ function clearAllTableData() {
     });
 }
 
+// Function to update table header with count
+function updateTableHeader(tableName, count) {
+    const table = document.getElementById(tableName.replace(/\s+/g, '-'));
+    if (!table) return;
+    
+    const cardHeader = table.closest('.card').querySelector('.card-header span');
+    if (cardHeader) {
+        if (count === 0) {
+            cardHeader.innerHTML = `${tableName} (0)`;
+        } else {
+            cardHeader.innerHTML = `${tableName} (${count})`;
+        }
+    }
+}
+
 // Update table with specific data
 function updateTable(tableName, data) {
     const table = document.getElementById(tableName.replace(/\s+/g, '-'));
@@ -1023,7 +1038,17 @@ function updateTable(tableName, data) {
 
     const tbody = table.querySelector('tbody');
     tbody.innerHTML = '';
-    console.log(data.length);
+    updateTableHeader(tableName, data.length);
+    if (data.length === 0) {
+        const row = document.createElement('tr');
+        row.innerHTML = `
+            <td colspan="3" style="text-align: center; color: #ff6b6b; padding: 20px;">
+                No BTS Found
+            </td>
+        `;
+        tbody.appendChild(row);
+        return;
+    }
 
     data.forEach(item => {
         const row = document.createElement('tr');
